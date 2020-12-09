@@ -1,0 +1,36 @@
+body {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.container header {
+  background-color: #24E7ED;
+}
+
+.container header #main-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.container header #main-menu ul {
+  padding: 0px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container header #main-menu li {
+  padding: 0px 3%;
+}
+/*# sourceMappingURL=inicio.css.map */

@@ -1,0 +1,36 @@
+    //variables
+//content
+$content-with:100%;
+//header
+$header-background:#24E7ED;
+
+//menu
+$menu-a-text-color:white;
+
+//html
+body{
+    margin: 0 auto;
+}
+.container{
+    max-width: $content-with;
+    display: grid;
+    grid-gap: 10px;
+    header{
+        background-color: $header-background;
+        #main-menu{
+            a{
+                text-decoration: none;
+                color:$menu-a-text-color;
+            }
+            ul{
+                padding: 0px 5px;
+                display: flex;
+                list-style-type: none;
+                flex-direction: row;
+            }
+            li{
+                padding: 0px 3%;
+            }
+        }
+    }
+}
