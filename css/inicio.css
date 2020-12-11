@@ -4,33 +4,36 @@ body {
 
 .container {
   max-width: 100%;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 10px;
-}
-
-.container header {
-  background-color: #24E7ED;
 }
 
 .container header #main-menu a {
   text-decoration: none;
   color: white;
+  font-size: 1.2em;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 .container header #main-menu ul {
-  padding: 0px 5px;
+  min-height: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style-type: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .container header #main-menu li {
-  padding: 0px 3%;
+  background-color: #24E7ED;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.container header #main-menu li:hover {
+  background-color: blue;
 }
 /*# sourceMappingURL=inicio.css.map */
