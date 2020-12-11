@@ -1,12 +1,45 @@
 body {
-  margin: 0 auto;
+  margin: auto;
 }
 
 .container {
   max-width: 100%;
 }
 
-.container header #main-menu a {
+.container header #main-menu {
+  background-color: #00a2ce;
+}
+
+.container header #main-menu #titulo {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7em;
+  padding: 15px 1%;
+  float: left;
+}
+
+.container header #main-menu ul {
+  padding: 0;
+  min-height: 50px;
+  list-style: none;
+  margin: 0;
+  margin-left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container header #main-menu ul li {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.container header #main-menu ul li:hover {
+  background-color: #0092b9;
+}
+
+.container header #main-menu ul li a {
   text-decoration: none;
   color: white;
   font-size: 1.2em;
@@ -14,26 +47,5 @@ body {
   display: inline-block;
   width: 100%;
   text-align: center;
-}
-
-.container header #main-menu ul {
-  min-height: 50px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container header #main-menu li {
-  background-color: #24E7ED;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-}
-
-.container header #main-menu li:hover {
-  background-color: blue;
 }
 /*# sourceMappingURL=inicio.css.map */

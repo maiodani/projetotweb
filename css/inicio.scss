@@ -2,40 +2,50 @@
 //content
 $content-with:100%;
 //header
-$header-background:#24E7ED;
+$header-background:#00a2ce;
 
 //menu
 $menu-a-text-color:white;
 
 //html
 body{
-    margin: 0 auto;
+    margin: auto;
 }
 .container{
     max-width: $content-with;
     header{
         #main-menu{
-            a{
+            background-color: $header-background;
+            #titulo{
                 text-decoration: none;
                 color:$menu-a-text-color;
-                font-size: 1.2em;
-                padding: 20px 0; 
-                display: inline-block; 
-                width: 100%; 
-                text-align: center; 
+                font-size: 1.7em;
+                padding: 15px 1%; 
+                float: left;
             }
             ul{
+                padding: 0;
                 min-height: 50px;
                 list-style: none; 
-                margin: 0; 
-                padding: 0; 
+                margin:0;
+                margin-left: 50%;
                 display: flex; 
-            }
-            li{
-                background-color: $header-background;
-                flex: 3;
-                &:hover{
-                    background-color: blue;
+                li{
+
+                    flex: 3;
+                    &:hover{
+                        background-color: #0092b9;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        color:$menu-a-text-color;
+                        font-size: 1.2em;
+                        padding: 20px 0; 
+                        display: inline-block; 
+                        width: 100%; 
+                        text-align: center; 
+                    }
                 }
             }
         }
