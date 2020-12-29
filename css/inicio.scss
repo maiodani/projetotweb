@@ -2,7 +2,7 @@
 //content
 $content-with:100%;
 //header
-$header-background:#00a2ce;
+$header-background:#9DB4C0;
 
 //menu
 $menu-a-text-color:white;
@@ -10,12 +10,38 @@ $menu-a-text-color:white;
 //html
 body{
     margin: auto;
+    min-height: 500vh;
 }
+svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+  
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+  
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+}
+
 .container{
     max-width: $content-with;
     header{
-        #main-menu{
+        
+        .main-menu{
+            z-index: 1;
+            position: fixed;
             background-color: $header-background;
+            min-width: 100%;
             #titulo{
                 text-decoration: none;
                 color:$menu-a-text-color;
@@ -31,8 +57,7 @@ body{
                 margin-left: 50%;
                 display: flex; 
                 li{
-
-                    flex: 3;
+                    flex:3;
                     &:hover{
                         background-color: #0092b9;
                     }
@@ -47,6 +72,125 @@ body{
                         text-align: center; 
                     }
                 }
+            }
+
+            //menu animation
+            animation: opacity 0.2s linear infinite;
+            animation-play-state: paused;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-delay: calc(var(--scroll) * -1s);
+            @keyframes opacity {
+                from{
+                    opacity: 100%;
+                    visibility:visible;
+                }
+                to {
+                    opacity: 0%; 
+                    visibility: hidden;
+                }
+            }
+        }
+        #second-menu-open{
+            position: fixed;
+            z-index: 3;
+            width: 100px;
+            min-height: 60px;
+            background-color: white;
+            //second menu animation
+            animation: opacitymove 0.2s linear infinite;
+            animation-play-state: paused;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-delay: calc(var(--scroll) * -1s);
+            a{
+                text-decoration: none;
+                color:black;
+                font-size: 1.2em;
+                padding: 20px 0; 
+                display: inline-block; 
+                width: 100%; 
+                text-align: center; 
+            }
+            a:hover{
+                color:blue;
+                
+            }
+            @keyframes opacitymove {
+                from{
+                    opacity: 0%;
+                    left: 47%;
+                }
+                75% {
+                    opacity: 80%;
+                    left: 47%;
+                }
+                to{
+                    opacity: 80%;
+                    left: 2%;
+                }
+            }
+        }
+        .second-menu{
+            z-index: 1;
+            position: fixed;
+            background-color: red;
+            min-width: 100%;
+            min-height: 100%;     
+            display: flex;
+            flex-wrap: wrap;
+            #menu{
+                width: 50%;
+                box-sizing: border-box; 
+                background-color: black;
+                ul{
+                    list-style: none; 
+                    margin: 0;
+                    padding: 0;
+                    li{
+    
+                        &:hover{
+                            background-color: #0092b9;
+                        }
+    
+                        a{
+                            text-decoration: none;
+                            color:$menu-a-text-color;
+                            font-size: 1.2em;
+                            padding: 20px 0; 
+                            display: inline-block; 
+                            width: 100%; 
+                            text-align: center; 
+                        }
+                    }
+                }
+            }
+            #login{
+                width: 50%;
+                box-sizing: border-box;   
+                background-color: yellow;
+            }
+        }
+        //second menu animation
+        .start{
+            animation: movedash 1s ;
+        }
+        .finish{
+            margin-left: 0%;
+        }
+        .startreverse{
+            animation: movedash 1s ;
+            animation-direction: reverse;
+        }
+        .finishreverse{
+            margin-left: -100%;
+        }
+        @keyframes movedash {
+            from{
+                margin-left: -100%;
+            }
+            to{
+                margin-left: 0%;
             }
         }
     }

@@ -1,16 +1,62 @@
 body {
   margin: auto;
+  min-height: 500vh;
+}
+
+svg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .container {
   max-width: 100%;
 }
 
-.container header #main-menu {
-  background-color: #00a2ce;
+.container header .main-menu {
+  z-index: 1;
+  position: fixed;
+  background-color: #9DB4C0;
+  min-width: 100%;
+  -webkit-animation: opacity 0.2s linear infinite;
+          animation: opacity 0.2s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
 }
 
-.container header #main-menu #titulo {
+.container header .main-menu #titulo {
   text-decoration: none;
   color: white;
   font-size: 1.7em;
@@ -18,7 +64,7 @@ body {
   float: left;
 }
 
-.container header #main-menu ul {
+.container header .main-menu ul {
   padding: 0;
   min-height: 50px;
   list-style: none;
@@ -29,17 +75,17 @@ body {
   display: flex;
 }
 
-.container header #main-menu ul li {
+.container header .main-menu ul li {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
 }
 
-.container header #main-menu ul li:hover {
+.container header .main-menu ul li:hover {
   background-color: #0092b9;
 }
 
-.container header #main-menu ul li a {
+.container header .main-menu ul li a {
   text-decoration: none;
   color: white;
   font-size: 1.2em;
@@ -47,5 +93,173 @@ body {
   display: inline-block;
   width: 100%;
   text-align: center;
+}
+
+@-webkit-keyframes opacity {
+  from {
+    opacity: 100%;
+    visibility: visible;
+  }
+  to {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 100%;
+    visibility: visible;
+  }
+  to {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+
+.container header #second-menu-open {
+  position: fixed;
+  z-index: 3;
+  width: 100px;
+  min-height: 60px;
+  background-color: white;
+  -webkit-animation: opacitymove 0.2s linear infinite;
+          animation: opacitymove 0.2s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+}
+
+.container header #second-menu-open a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.container header #second-menu-open a:hover {
+  color: blue;
+}
+
+@-webkit-keyframes opacitymove {
+  from {
+    opacity: 0%;
+    left: 47%;
+  }
+  75% {
+    opacity: 80%;
+    left: 47%;
+  }
+  to {
+    opacity: 80%;
+    left: 2%;
+  }
+}
+
+@keyframes opacitymove {
+  from {
+    opacity: 0%;
+    left: 47%;
+  }
+  75% {
+    opacity: 80%;
+    left: 47%;
+  }
+  to {
+    opacity: 80%;
+    left: 2%;
+  }
+}
+
+.container header .second-menu {
+  z-index: 1;
+  position: fixed;
+  background-color: red;
+  min-width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container header .second-menu #menu {
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: black;
+}
+
+.container header .second-menu #menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container header .second-menu #menu ul li:hover {
+  background-color: #0092b9;
+}
+
+.container header .second-menu #menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.container header .second-menu #login {
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: yellow;
+}
+
+.container header .start {
+  -webkit-animation: movedash 1s;
+          animation: movedash 1s;
+}
+
+.container header .finish {
+  margin-left: 0%;
+}
+
+.container header .startreverse {
+  -webkit-animation: movedash 1s;
+          animation: movedash 1s;
+  animation-direction: reverse;
+}
+
+.container header .finishreverse {
+  margin-left: -100%;
+}
+
+@-webkit-keyframes movedash {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes movedash {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
 }
 /*# sourceMappingURL=inicio.css.map */
