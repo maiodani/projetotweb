@@ -9,18 +9,20 @@ var secondmenu=document.querySelector('.second-menu');
 //functions
 function menuanimation(){
   if (document.querySelector('.second-menu').computedStyleMap().get('margin-left')=="-100%") {
-    secondmenu.classList.add('start');
+    secondmenu.classList.remove('startreverse');
     window.setTimeout(function() {
+      secondmenu.classList.add('start');
       secondmenu.classList.remove('finishreverse');
-      secondmenu.classList.remove('start');
       secondmenu.classList.add('finish');
-    }, 1000);
+    }, 1);
+    
   } else {
-    secondmenu.classList.add('startreverse');
+    secondmenu.classList.remove('start');
     window.setTimeout(function() {
+      secondmenu.classList.add('startreverse');
       secondmenu.classList.remove('finish');
-      secondmenu.classList.remove('startreverse');
       secondmenu.classList.add('finishreverse');
-    }, 1000);
+    }, 1);
+    
   }
 }
