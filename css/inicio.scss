@@ -12,6 +12,7 @@ body{
     margin: auto;
     min-height: 500vh;
 }
+//teste
 svg {
     position: fixed;
     top: 50%;
@@ -35,8 +36,8 @@ svg {
 
 .container{
     max-width: $content-with;
+    //menus
     header{
-        
         .main-menu{
             z-index: 1;
             position: fixed;
@@ -91,6 +92,7 @@ svg {
                 }
             }
         }
+        //div que abre segundo menu
         #second-menu-open{
             position: fixed;
             z-index: 3;
@@ -131,6 +133,7 @@ svg {
                 }
             }
         }
+        //segundo menu
         .second-menu{
             z-index: 1;
             position: fixed;
@@ -139,6 +142,7 @@ svg {
             min-height: 100%;     
             display: flex;
             flex-wrap: wrap;
+            //lado esquerdo
             #menu{
                 width: 50%;
                 box-sizing: border-box; 
@@ -165,6 +169,7 @@ svg {
                     }
                 }
             }
+            //lado direito
             #login{
                 width: 50%;
                 box-sizing: border-box;   
@@ -193,8 +198,10 @@ svg {
                 margin-left: 0%;
             }
         }
+
     }
+    //css a baixo de 1000px
     @media screen and (max-width: 1000px){
-       
+        
     }
 }

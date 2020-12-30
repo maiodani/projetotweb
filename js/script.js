@@ -23,6 +23,5 @@ function menuanimation(){
       secondmenu.classList.remove('finish');
       secondmenu.classList.add('finishreverse');
     }, 1);
-    
   }
 }
