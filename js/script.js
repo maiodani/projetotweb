@@ -4,7 +4,7 @@ window.addEventListener('scroll', () => {
 }, false);
 
 //click
-document.getElementById('second-menu-open').addEventListener('click',menuanimation);
+document.querySelector('.second-menu-open').addEventListener('click',menuanimation);
 var secondmenu=document.querySelector('.second-menu');
 //functions
 function menuanimation(){
@@ -14,14 +14,17 @@ function menuanimation(){
       secondmenu.classList.add('start');
       secondmenu.classList.remove('finishreverse');
       secondmenu.classList.add('finish');
+      document.body.style.overflowY="hidden";
+      
     }, 1);
-    
   } else {
     secondmenu.classList.remove('start');
     window.setTimeout(function() {
       secondmenu.classList.add('startreverse');
       secondmenu.classList.remove('finish');
       secondmenu.classList.add('finishreverse');
+      document.body.style.overflowY="";
     }, 1);
+
   }
 }

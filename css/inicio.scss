@@ -50,6 +50,9 @@ svg {
                 padding: 15px 1%; 
                 float: left;
             }
+            img{
+                display: none;            
+            }
             ul{
                 padding: 0;
                 min-height: 50px;
@@ -57,8 +60,9 @@ svg {
                 margin:0;
                 margin-left: 50%;
                 display: flex; 
+                flex-direction: row;
                 li{
-                    flex:3;
+                    flex-grow: 1;
                     &:hover{
                         background-color: #0092b9;
                     }
@@ -93,18 +97,13 @@ svg {
             }
         }
         //div que abre segundo menu
-        #second-menu-open{
+        .second-menu-open{
             position: fixed;
             z-index: 3;
             width: 100px;
             min-height: 60px;
             background-color: white;
-            //second menu animation
-            animation: opacitymove 0.2s linear infinite;
-            animation-play-state: paused;
-            animation-iteration-count: 1;
-            animation-fill-mode: both;
-            animation-delay: calc(var(--scroll) * -1s);
+            left: 2%;
             a{
                 text-decoration: none;
                 color:black;
@@ -113,11 +112,20 @@ svg {
                 display: inline-block; 
                 width: 100%; 
                 text-align: center; 
+                &:hover{
+                    color:blue;
+                    
+                }
             }
-            a:hover{
-                color:blue;
-                
+            img{
+                display: none;
             }
+            //second menu animation
+            animation: opacitymove 0.2s linear infinite;
+            animation-play-state:paused;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-delay: calc(var(--scroll) * -1s);
             @keyframes opacitymove {
                 from{
                     opacity: 0%;
@@ -145,26 +153,28 @@ svg {
             //lado esquerdo
             #menu{
                 width: 50%;
-                box-sizing: border-box; 
                 background-color: black;
+                display: flex;
                 ul{
                     list-style: none; 
                     margin: 0;
                     padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    margin:auto;        
                     li{
-    
-                        &:hover{
-                            background-color: #0092b9;
-                        }
-    
                         a{
                             text-decoration: none;
                             color:$menu-a-text-color;
-                            font-size: 1.2em;
+                            font-size: 1.7em;
                             padding: 20px 0; 
                             display: inline-block; 
                             width: 100%; 
                             text-align: center; 
+                            &:hover{
+                                color: #0092b9;
+                                font-size: 2em;
+                            }
                         }
                     }
                 }
@@ -172,7 +182,7 @@ svg {
             //lado direito
             #login{
                 width: 50%;
-                box-sizing: border-box;   
+                display: flex;
                 background-color: yellow;
             }
         }
@@ -201,7 +211,61 @@ svg {
 
     }
     //css a baixo de 1000px
-    @media screen and (max-width: 1000px){
+    @media screen and (max-width: 960px){
+        //menus
+        header{
+            .main-menu{
+                #titulo{
+                    padding: 15px 100px; 
+                }
+                ul{
+                    display: none;
+                }
+                animation: none;
+            }
+            .second-menu-open{
+                z-index: 3;
+                background-color: unset;
+                left: 2%;
+                animation: none;
+                a{
+                    display: none;
+                }
+                img{
+                    display: block;
+                    width: 60px;
+                    filter: invert(100%);
+                }
+            }
+            .second-menu{    
+                overflow-y:hidden;
+                #menu{
+                    width: 100%;  
+                }
+                #login{
+                    display: none;    
+                }
+            }
+
+        }
         
+    }
+    @media screen and (max-width: 465px){
+        header{
+            .main-menu{
+                #titulo{
+                    display: none;
+                }
+                img{
+                    display: block;
+                    padding: 10px 45%;
+                    width: 50px;
+                    float: left;
+                }
+            }
+            .second-menu-open{
+                top:5px;
+            }
+        }
     }
 }

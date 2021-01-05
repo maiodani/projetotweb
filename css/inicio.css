@@ -64,6 +64,10 @@ svg {
   float: left;
 }
 
+.container header .main-menu img {
+  display: none;
+}
+
 .container header .main-menu ul {
   padding: 0;
   min-height: 50px;
@@ -73,12 +77,16 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .container header .main-menu ul li {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .container header .main-menu ul li:hover {
@@ -117,12 +125,13 @@ svg {
   }
 }
 
-.container header #second-menu-open {
+.container header .second-menu-open {
   position: fixed;
   z-index: 3;
   width: 100px;
   min-height: 60px;
   background-color: white;
+  left: 2%;
   -webkit-animation: opacitymove 0.2s linear infinite;
           animation: opacitymove 0.2s linear infinite;
   -webkit-animation-play-state: paused;
@@ -135,7 +144,7 @@ svg {
           animation-delay: calc(var(--scroll) * -1s);
 }
 
-.container header #second-menu-open a {
+.container header .second-menu-open a {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
@@ -145,8 +154,12 @@ svg {
   text-align: center;
 }
 
-.container header #second-menu-open a:hover {
+.container header .second-menu-open a:hover {
   color: blue;
+}
+
+.container header .second-menu-open img {
+  display: none;
 }
 
 @-webkit-keyframes opacitymove {
@@ -194,35 +207,46 @@ svg {
 
 .container header .second-menu #menu {
   width: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container header .second-menu #menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.container header .second-menu #menu ul li:hover {
-  background-color: #0092b9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
 }
 
 .container header .second-menu #menu ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.7em;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
   text-align: center;
 }
 
+.container header .second-menu #menu ul li a:hover {
+  color: #0092b9;
+  font-size: 2em;
+}
+
 .container header .second-menu #login {
   width: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: yellow;
 }
 
@@ -260,6 +284,59 @@ svg {
   }
   to {
     margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container header .main-menu {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .container header .main-menu #titulo {
+    padding: 15px 100px;
+  }
+  .container header .main-menu ul {
+    display: none;
+  }
+  .container header .second-menu-open {
+    z-index: 3;
+    background-color: unset;
+    left: 2%;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .container header .second-menu-open a {
+    display: none;
+  }
+  .container header .second-menu-open img {
+    display: block;
+    width: 60px;
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+  }
+  .container header .second-menu {
+    overflow-y: hidden;
+  }
+  .container header .second-menu #menu {
+    width: 100%;
+  }
+  .container header .second-menu #login {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .container header .main-menu #titulo {
+    display: none;
+  }
+  .container header .main-menu img {
+    display: block;
+    padding: 10px 45%;
+    width: 50px;
+    float: left;
+  }
+  .container header .second-menu-open {
+    top: 5px;
   }
 }
 /*# sourceMappingURL=inicio.css.map */
