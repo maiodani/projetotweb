@@ -10,17 +10,17 @@ $menu-a-text-color:white;
 //html
 body{
     margin: auto;
-    min-height: 800;
+    min-height: 10000px;
 }
 .container{
-    max-width: $content-with;
+    width: 100%;
     //menus
     header{
         .main-menu{
             z-index: 1;
             position: fixed;
             background-color: $header-background;
-            min-width: 100%;
+            width: 100%;
             #titulo{
                 text-decoration: none;
                 color:$menu-a-text-color;
@@ -79,7 +79,7 @@ body{
             position: fixed;
             z-index: 3;
             width: 100px;
-            min-height: 60px;
+            height: 60px;
             background-color: white;
             left: 2%;
             a{
@@ -124,8 +124,8 @@ body{
             z-index: 1;
             position: fixed;
             background-color: red;
-            min-width: 100%;
-            min-height: 100%;     
+            width: 100%;
+            height: 100%;     
             display: flex;
             flex-wrap: wrap;
             //lado esquerdo
@@ -188,6 +188,28 @@ body{
         }
 
     }
+    //slideshow
+    .slideshow{
+        width: 100%;
+        height: 100px;
+        background-color: black;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //css a baixo de 1000px
     @media screen and (max-width: 960px){
         //menus

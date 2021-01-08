@@ -1,17 +1,17 @@
 body {
   margin: auto;
-  min-height: 800;
+  min-height: 10000px;
 }
 
 .container {
-  max-width: 100%;
+  width: 100%;
 }
 
 .container header .main-menu {
   z-index: 1;
   position: fixed;
   background-color: #9DB4C0;
-  min-width: 100%;
+  width: 100%;
   -webkit-animation: opacity 0.2s linear infinite;
           animation: opacity 0.2s linear infinite;
   -webkit-animation-play-state: paused;
@@ -97,7 +97,7 @@ body {
   position: fixed;
   z-index: 3;
   width: 100px;
-  min-height: 60px;
+  height: 60px;
   background-color: white;
   left: 2%;
   -webkit-animation: opacitymove 0.2s linear infinite;
@@ -164,8 +164,8 @@ body {
   z-index: 1;
   position: fixed;
   background-color: red;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,6 +253,12 @@ body {
   to {
     margin-left: 0%;
   }
+}
+
+.container .slideshow {
+  width: 100%;
+  height: 100px;
+  background-color: black;
 }
 
 @media screen and (max-width: 960px) {
