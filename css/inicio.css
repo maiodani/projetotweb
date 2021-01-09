@@ -3,6 +3,7 @@ body {
 }
 
 .container {
+  background-color: #E0FBFC;
   width: 100%;
 }
 
@@ -97,17 +98,17 @@ body {
 .container header .second-menu-open {
   position: fixed;
   z-index: 3;
-  top: 1%;
+  top: 4%;
   width: 100px;
   height: 60px;
   background-color: white;
-  left: 2%;
+  left: 4%;
   opacity: 80%;
 }
 
 .container header .second-menu-open a {
   text-decoration: none;
-  color: black;
+  color: #828282;
   font-size: 1.2em;
   padding: 20px 0;
   display: inline-block;
@@ -116,7 +117,7 @@ body {
 }
 
 .container header .second-menu-open a:hover {
-  color: blue;
+  color: #34CF94;
 }
 
 .container header .second-menu-open img {
@@ -139,7 +140,7 @@ body {
 
 .container header .second-menu #menu {
   width: 50%;
-  background-color: black;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,7 +162,7 @@ body {
 
 .container header .second-menu #menu ul li a {
   text-decoration: none;
-  color: white;
+  color: #828282;
   font-size: 1.7em;
   padding: 20px 0;
   display: inline-block;
@@ -170,7 +171,7 @@ body {
 }
 
 .container header .second-menu #menu ul li a:hover {
-  color: #0092b9;
+  color: #34CFAF;
   font-size: 2em;
 }
 
@@ -179,7 +180,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: yellow;
+  background: -webkit-gradient(linear, right top, left top, from(#349FCF), to(#33CFC9));
+  background: linear-gradient(right, #349FCF, #33CFC9);
 }
 
 .container header .start {
@@ -232,7 +234,6 @@ body {
 }
 
 .container section {
-  background-color: white;
   position: relative;
   margin-top: 42%;
 }
@@ -240,7 +241,7 @@ body {
 .container section #destaques {
   width: 100%;
   height: 500px;
-  background-color: black;
+  background-color: white;
 }
 
 @media screen and (max-width: 960px) {
