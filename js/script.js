@@ -32,9 +32,10 @@ var slideIndex = 0;
 var img1=document.querySelector('.slide_image1');
 var img2=document.querySelector('.slide_image2');
 var img3=document.querySelector('.slide_image3');
-setTimeout(slideanimation, 10000);
+var slideanimation_time = 20000;
+setTimeout(slideanimation,slideanimation_time);
 function slideanimation() {
-  setTimeout(slideanimation, 10000);
+  setTimeout(slideanimation, slideanimation_time);
   if (img1.classList.contains("finishslidein")) {
     img1.classList.remove('slidein');
     img2.classList.remove('slideout');
