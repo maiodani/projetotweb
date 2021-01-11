@@ -225,12 +225,77 @@ body {
   z-index: 0;
   top: 0;
   width: 100%;
-  background-color: red;
+  height: 500px;
   position: fixed;
 }
 
-.container nav .slide {
+.container nav .slide_image1 {
   width: 100%;
+  position: fixed;
+}
+
+.container nav .slide_image2 {
+  width: 100%;
+  position: fixed;
+}
+
+.container nav .slide_image3 {
+  width: 100%;
+  position: fixed;
+}
+
+.container nav .slidein {
+  -webkit-animation: moveslidein 1s;
+          animation: moveslidein 1s;
+}
+
+.container nav .finishslidein {
+  margin-left: 0%;
+}
+
+.container nav .slideout {
+  -webkit-animation: moveslideout 1s;
+          animation: moveslideout 1s;
+}
+
+.container nav .finishslideout {
+  margin-left: -100%;
+}
+
+@-webkit-keyframes moveslidein {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes moveslidein {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@-webkit-keyframes moveslideout {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+@keyframes moveslideout {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
 }
 
 .container section {

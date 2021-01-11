@@ -168,10 +168,48 @@ body{
         //slideshow
         top:0;
         width: 100%;
-        background-color: red;
+        height: 500px;
         position: fixed;
-        .slide{
+        .slide_image1{
             width: 100%;
+            position: fixed;
+        }
+        .slide_image2{
+            width: 100%;
+            position: fixed;
+        }
+        .slide_image3{
+            width: 100%;
+            position: fixed;
+        }
+        //slides animation
+        .slidein{
+            animation: moveslidein 1s ;
+        }
+        .finishslidein{
+            margin-left: 0%;
+        }
+        .slideout{
+            animation: moveslideout 1s ;
+        }
+        .finishslideout{
+            margin-left: -100%;
+        }
+        @keyframes moveslidein {
+            from{
+                margin-left: -100%;
+            }
+            to{
+                margin-left: 0%;
+            }
+        }
+        @keyframes moveslideout {
+            from{
+                margin-left: 0%;
+            }
+            to{
+                margin-left: 100%;
+            }
         }
     }
     section{
