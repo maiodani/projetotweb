@@ -39,7 +39,7 @@ function menuanimation(){
 var img1=document.querySelector('.slide_image1');
 var img2=document.querySelector('.slide_image2');
 var img3=document.querySelector('.slide_image3');
-var slideanimation_time = 10000;
+var slideanimation_time = 20000;
 setTimeout(slideanimation,slideanimation_time);
 function slideanimation() {
   setTimeout(slideanimation, slideanimation_time);
@@ -94,4 +94,15 @@ function loginanimationclose(){
     login.classList.add('finishreverselogin');
     document.body.style.overflowY="";
   }, 1);
+}
+var tentativas=3;
+function loginuser(){
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  if (username == "admin" && password == "admin"){
+    window.location = "success.html";
+  }
+  else{
+    alert("Username ou Password incorretos");
+  }
 }

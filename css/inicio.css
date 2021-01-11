@@ -80,8 +80,42 @@ body {
   width: 50px;
   height: 40px;
   padding: 30px;
+  position: fixed;
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+.container header .login form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.container header .login form input[type=text], .container header .login form input[type=password] {
+  text-align: center;
+  margin: auto;
+  border: none;
+  width: 50%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.container header .login form input[type=button] {
+  margin: auto;
+  border: none;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.container header .login form input[type=button]:hover {
+  background-color: #14ceb1;
 }
 
 .container header .startlogin {
@@ -346,11 +380,10 @@ body {
   }
   .container header .second-menu #menu ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -401,6 +434,9 @@ body {
   }
   .container header .second-menu-open {
     top: 0px;
+  }
+  .container nav {
+    display: none;
   }
 }
 /*# sourceMappingURL=inicio.css.map */
