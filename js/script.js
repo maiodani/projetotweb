@@ -5,8 +5,14 @@ window.addEventListener('scroll', () => {
 
 //click
 document.querySelector('.second-menu-open').addEventListener('click',menuanimation);
+document.querySelector('.imglogin').addEventListener('click',loginanimationopen);
+document.querySelector('.main_imglogin').addEventListener('click',loginanimationopen);
+document.querySelector('.close_login').addEventListener('click',loginanimationclose);
 var secondmenu=document.querySelector('.second-menu');
+var login=document.querySelector('.login');
+
 //functions
+//menu que vem de lado
 function menuanimation(){
   if (document.querySelector('.second-menu').computedStyleMap().get('margin-left')=="-100%") {
     secondmenu.classList.remove('startreverse');
@@ -25,10 +31,10 @@ function menuanimation(){
       secondmenu.classList.add('finishreverse');
       document.body.style.overflowY="";
     }, 1);
-
   }
 }
-var slideIndex = 0;
+
+//slider
 var img1=document.querySelector('.slide_image1');
 var img2=document.querySelector('.slide_image2');
 var img3=document.querySelector('.slide_image3');
@@ -70,4 +76,35 @@ function slideanimation() {
       img1.classList.add('finishslidein');
     }, 1);
   }
+}
+
+//login
+function loginanimationopen(){
+  if (document.querySelector('.login').computedStyleMap().get('margin-left')=="100%") {
+    login.classList.remove('startreverselogin');
+    window.setTimeout(function() {
+      login.classList.add('startlogin');
+      login.classList.remove('finishreverselogin');
+      login.classList.add('finishlogin');
+      document.body.style.overflowY="hidden";
+      
+    }, 1);
+  } else {
+    login.classList.remove('startlogin');
+    window.setTimeout(function() {
+      login.classList.add('startreverselogin');
+      login.classList.remove('finishlogin');
+      login.classList.add('finishreverselogin');
+      document.body.style.overflowY="";
+    }, 1);
+  }
+}
+function loginanimationclose(){
+  login.classList.remove('startlogin');
+  window.setTimeout(function() {
+    login.classList.add('startreverselogin');
+    login.classList.remove('finishlogin');
+    login.classList.add('finishreverselogin');
+    document.body.style.overflowY="";
+  }, 1);
 }
