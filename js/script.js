@@ -35,47 +35,34 @@ function menuanimation(){
 }
 
 //slider
+
 var img1=document.querySelector('.slide_image1');
 var img2=document.querySelector('.slide_image2');
 var img3=document.querySelector('.slide_image3');
-var slideanimation_time = 20000;
+var slideanimation_time = 10000;
 setTimeout(slideanimation,slideanimation_time);
 function slideanimation() {
   setTimeout(slideanimation, slideanimation_time);
   if (img1.classList.contains("finishslidein")) {
-    img1.classList.remove('slidein');
-    img2.classList.remove('slideout');
-    window.setTimeout(function() {
-      img1.classList.add('slideout');
-      img2.classList.add('slidein');
-      img1.classList.remove('finishslidein');
-      img2.classList.remove('finishslideout');
-      img1.classList.add('finishslideout');
-      img2.classList.add('finishslidein');
-    }, 1);
+    imgout=img1;
+    imgin=img2;
   }else if(img2.classList.contains("finishslidein")){
-    img2.classList.remove('slidein');
-    img3.classList.remove('slideout');
-    window.setTimeout(function() {
-      img2.classList.add('slideout');
-      img3.classList.add('slidein');
-      img2.classList.remove('finishslidein');
-      img3.classList.remove('finishslideout');
-      img2.classList.add('finishslideout');
-      img3.classList.add('finishslidein');
-    }, 1);
+    imgout=img2;
+    imgin=img3;
   }else if(img3.classList.contains("finishslidein")){
-    img3.classList.remove('slidein');
-    img1.classList.remove('slideout');
-    window.setTimeout(function() {
-      img3.classList.add('slideout');
-      img1.classList.add('slidein');
-      img3.classList.remove('finishslidein');
-      img1.classList.remove('finishslideout');
-      img3.classList.add('finishslideout');
-      img1.classList.add('finishslidein');
-    }, 1);
+    imgout=img3;
+    imgin=img1;
   }
+  imgout.classList.remove('slidein');
+  imgin.classList.remove('slideout');
+  window.setTimeout(function() {
+    imgout.classList.add('slideout');
+    imgin.classList.add('slidein');
+    imgout.classList.remove('finishslidein');
+    imgin.classList.remove('finishslideout');
+    imgout.classList.add('finishslideout');
+    imgin.classList.add('finishslidein');
+  }, 1);
 }
 
 //login
