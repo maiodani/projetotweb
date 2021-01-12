@@ -5,16 +5,33 @@ body{
 
 .container{  
     section{
-        text-align: left;
-        width: 100%;
-        height: 1500px;
-        #destaques{
-            padding-top: 100px;
-            margin: 15%;
-            width: 50%;
-            a{
-                font-size: 1.1em;
+        margin-top:unset;
+        #main{  
+            padding-top: 50px;
+            display: flex;
+            flex-direction:row;
+            width: 100%;
+            #lado_esquerdo{    
+                margin-left: 5%;
+                text-align: left;
+                width: 60%;       
+                a{
+                    font-size: 1.1em;
+                }
+            } 
+            
+            #lado_direito{   
+                padding-left:10%;
+                #logo{
+                    padding-top:20%;
+                    width: 70%;
+                }
+                text-align: right;
             }
+            
         }
+
+        
     }
+
 }

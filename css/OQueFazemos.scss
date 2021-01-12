@@ -1,0 +1,15 @@
+//html
+body{
+    margin: 0 auto;
+}
+nav{
+    .main-nav{ 
+        .dropdown-content{  
+            a {
+                height: auto;
+                line-height: initial;
+                padding: 3px 0;
+            }
+        }
+    }
+}

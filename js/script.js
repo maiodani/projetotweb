@@ -100,7 +100,7 @@ function loginuser(){
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
   if (username == "admin" && password == "admin"){
-    window.location = "success.html";
+    window.location = "login.html";
   }
   else{
     alert("Username ou Password incorretos");
