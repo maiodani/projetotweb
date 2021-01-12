@@ -1,7 +1,3 @@
-//html
-body{
-    margin: 0 auto;
-}
 
 .container{  
     section{
@@ -12,11 +8,11 @@ body{
             flex-direction:row;
             width: 100%;
             #lado_esquerdo{    
-                margin-left: 5%;
+                padding-left: 4%;
                 text-align: left;
                 width: 60%;       
                 a{
-                    font-size: 1.1em;
+                    font-size: 1.5em;
                 }
             } 
             
@@ -26,6 +22,8 @@ body{
                     padding-top:20%;
                     width: 70%;
                 }
+                padding-right: 4%;
+                font-size: 1.5em;
                 text-align: right;
             }
             
@@ -33,5 +31,32 @@ body{
 
         
     }
-
+    @media screen and (max-width: 960px){
+        section{
+            margin-top: 100px;
+            #main{  
+                display: unset;
+                flex-direction:unset;
+                #lado_esquerdo{    
+                    padding-left: unset;
+                    text-align: center;
+                    width: 100%;       
+                    a{
+                        font-size: 4vw;
+                    }
+                } 
+                
+                #lado_direito{   
+                    padding-left:unset;
+                    #logo{
+                        padding-top:20%;
+                        width: 50%;
+                    }
+                    padding-right: unset;
+                    font-size: 4vw;
+                    text-align: center;
+                }
+            } 
+        }
+    }
 }

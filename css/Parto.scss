@@ -1,0 +1,44 @@
+//html
+body{
+    margin: 0 auto;
+}
+
+.container{  
+    section{
+        margin-top:unset;
+        
+        #main{  
+            padding-top: 50px;
+            display: flex;
+            flex-direction:row;
+            width: 100%;
+           
+            #lado_esquerdo{    
+                margin-left: 5%;
+                
+                text-align: left;
+                width: 60%;       
+                a{
+                    font-size: 1.5em;
+                }
+            } 
+            
+            
+            #lado_direito{   
+                padding-left:10%;
+                
+                #logo{
+                    padding-top:20%;
+                    width: 70%;
+                }
+                font-size: 1.5em;
+                text-align: right;
+            }
+        
+            
+        }
+
+        
+    }
+
+}

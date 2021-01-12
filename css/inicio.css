@@ -416,8 +416,22 @@ body {
   .container header .login img {
     display: none;
   }
+  .container section {
+    margin-top: unset;
+  }
   .container section .menu {
     display: none;
+  }
+  .container section #destaques {
+    padding-top: 80px;
+    width: 90%;
+    text-align: center;
+  }
+  .container section #destaques img {
+    width: 80%;
+  }
+  .container section #destaques a {
+    font-size: 4vw;
   }
 }
 

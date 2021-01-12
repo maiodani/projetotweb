@@ -232,20 +232,6 @@ body{
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //css a baixo de 1000px
     @media screen and (max-width: 960px){
         //menus
@@ -336,12 +322,23 @@ body{
             }
         }
         section{
+            margin-top: unset;
             .menu{
                 display: none;
             }
-        }
-        
-    }
+            #destaques{
+                padding-top: 80px;
+                width: 90%;
+                text-align: center;
+                img{
+                    width: 80%;
+                }  
+                a{
+                    font-size: 4vw;
+                }
+            }
+        } 
+    }   
     @media screen and (max-width: 465px){
         header{
             .main-menu{
@@ -371,6 +368,6 @@ body{
         }
         nav{
             display: none;
-        }   
+        }        
     }
 }
