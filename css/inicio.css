@@ -11,34 +11,34 @@ body {
   width: 100%;
 }
 
-.container header .main-menu {
+.container nav .main-menu {
   display: none;
 }
 
-.container header .second-menu-open {
+.container nav .second-menu-open {
   display: none;
 }
 
-.container header .second-menu {
+.container nav .second-menu {
   display: none;
 }
 
-.container header .start {
+.container nav .start {
   -webkit-animation: movedash 1s;
           animation: movedash 1s;
 }
 
-.container header .finish {
+.container nav .finish {
   margin-left: 0%;
 }
 
-.container header .startreverse {
+.container nav .startreverse {
   -webkit-animation: movedash 1s;
           animation: movedash 1s;
   animation-direction: reverse;
 }
 
-.container header .finishreverse {
+.container nav .finishreverse {
   margin-left: -100%;
 }
 
@@ -60,7 +60,7 @@ body {
   }
 }
 
-.container header .login {
+.container nav .login {
   overflow-y: hidden;
   z-index: 1;
   position: fixed;
@@ -76,7 +76,7 @@ body {
   background: linear-gradient(to left, #349FCF, #33CFC9);
 }
 
-.container header .login img {
+.container nav .login img {
   width: 50px;
   height: 40px;
   padding: 30px;
@@ -85,7 +85,7 @@ body {
           filter: invert(100%);
 }
 
-.container header .login form {
+.container nav .login form {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,7 +97,7 @@ body {
   margin: auto;
 }
 
-.container header .login form input[type=text], .container header .login form input[type=password] {
+.container nav .login form input[type=text], .container nav .login form input[type=password] {
   text-align: center;
   margin: auto;
   border: none;
@@ -106,7 +106,7 @@ body {
   margin-bottom: 10px;
 }
 
-.container header .login form input[type=button] {
+.container nav .login form input[type=button] {
   margin: auto;
   border: none;
   width: 50%;
@@ -114,26 +114,26 @@ body {
   margin-bottom: 10px;
 }
 
-.container header .login form input[type=button]:hover {
+.container nav .login form input[type=button]:hover {
   background-color: #14ceb1;
 }
 
-.container header .startlogin {
+.container nav .startlogin {
   -webkit-animation: movedashlogin 1s;
           animation: movedashlogin 1s;
 }
 
-.container header .finishlogin {
+.container nav .finishlogin {
   margin-left: 0%;
 }
 
-.container header .startreverselogin {
+.container nav .startreverselogin {
   -webkit-animation: movedashlogin 1s;
           animation: movedashlogin 1s;
   animation-direction: reverse;
 }
 
-.container header .finishreverselogin {
+.container nav .finishreverselogin {
   margin-left: 100%;
 }
 
@@ -155,7 +155,7 @@ body {
   }
 }
 
-.container nav {
+.container header {
   z-index: 0;
   top: 0;
   width: 100%;
@@ -163,36 +163,36 @@ body {
   position: fixed;
 }
 
-.container nav .slide_image1 {
+.container header .slide_image1 {
   width: 100%;
   position: fixed;
 }
 
-.container nav .slide_image2 {
+.container header .slide_image2 {
   width: 100%;
   position: fixed;
 }
 
-.container nav .slide_image3 {
+.container header .slide_image3 {
   width: 100%;
   position: fixed;
 }
 
-.container nav .slidein {
+.container header .slidein {
   -webkit-animation: moveslidein 1s;
           animation: moveslidein 1s;
 }
 
-.container nav .finishslidein {
+.container header .finishslidein {
   margin-left: 0%;
 }
 
-.container nav .slideout {
+.container header .slideout {
   -webkit-animation: moveslideout 1s;
           animation: moveslideout 1s;
 }
 
-.container nav .finishslideout {
+.container header .finishslideout {
   margin-left: -100%;
 }
 
@@ -270,8 +270,31 @@ body {
           flex-grow: 1;
 }
 
+.container section .menu ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 18%;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.container section .menu ul li ul a {
+  color: black;
+  text-decoration: none;
+}
+
+.container section .menu ul li ul a:hover {
+  background-color: #ddd;
+}
+
 .container section .menu ul li:hover {
   background-color: #0092b9;
+}
+
+.container section .menu ul li:hover ul {
+  display: block;
 }
 
 .container section .menu ul li a {
@@ -336,7 +359,7 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  .container header .main-menu {
+  .container nav .main-menu {
     display: block;
     z-index: 2;
     position: fixed;
@@ -344,17 +367,17 @@ body {
     background-color: #33CFC9;
     width: 100%;
   }
-  .container header .main-menu #titulo {
+  .container nav .main-menu #titulo {
     text-decoration: none;
     color: white;
     font-size: 1.6em;
     padding: 15px 70px;
     float: left;
   }
-  .container header .main-menu img {
+  .container nav .main-menu img {
     display: none;
   }
-  .container header .main-menu .main_imglogin {
+  .container nav .main-menu .main_imglogin {
     display: block;
     padding: 10px;
     width: 40px;
@@ -363,7 +386,7 @@ body {
     float: right;
     margin-right: 10px;
   }
-  .container header .second-menu-open {
+  .container nav .second-menu-open {
     left: 2%;
     top: 0%;
     display: block;
@@ -371,13 +394,13 @@ body {
     z-index: 3;
     opacity: 80%;
   }
-  .container header .second-menu-open img {
+  .container nav .second-menu-open img {
     display: block;
     width: 60px;
     -webkit-filter: invert(100%);
             filter: invert(100%);
   }
-  .container header .second-menu {
+  .container nav .second-menu {
     overflow-y: hidden;
     z-index: 1;
     display: block;
@@ -392,14 +415,14 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .container header .second-menu #menu {
+  .container nav .second-menu #menu {
     width: 100%;
     background-color: white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .container header .second-menu #menu ul {
+  .container nav .second-menu #menu ul {
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -411,7 +434,7 @@ body {
             flex-direction: column;
     margin: auto;
   }
-  .container header .second-menu #menu ul li a {
+  .container nav .second-menu #menu ul li a {
     text-decoration: none;
     color: #828282;
     font-size: 1.7em;
@@ -420,11 +443,11 @@ body {
     width: 100%;
     text-align: center;
   }
-  .container header .second-menu #menu ul li a:hover {
+  .container nav .second-menu #menu ul li a:hover {
     color: #34CFAF;
     font-size: 2em;
   }
-  .container header .login img {
+  .container nav .login img {
     display: none;
   }
   .container section {
@@ -447,14 +470,14 @@ body {
 }
 
 @media screen and (max-width: 465px) {
-  .container header .main-menu {
+  .container nav .main-menu {
     display: block;
     height: 60px;
   }
-  .container header .main-menu #titulo {
+  .container nav .main-menu #titulo {
     display: none;
   }
-  .container header .main-menu #logo {
+  .container nav .main-menu #logo {
     display: block;
     width: 50px;
     height: 50px;
@@ -462,15 +485,15 @@ body {
     margin: auto;
     padding-top: 4px;
   }
-  .container header .main-menu .main_imglogin {
+  .container nav .main-menu .main_imglogin {
     margin-top: -55px;
     margin-right: unset;
     float: right;
   }
-  .container header .second-menu-open {
+  .container nav .second-menu-open {
     top: 0px;
   }
-  .container nav {
+  .container header {
     display: none;
   }
 }
