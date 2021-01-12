@@ -293,7 +293,7 @@ body {
 }
 
 .container section #destaques {
-  padding-top: 100px;
+  padding-top: 50px;
   margin: auto;
   width: 50%;
 }
@@ -307,8 +307,9 @@ body {
 }
 
 .container footer {
+  bottom: 0;
   width: 100%;
-  height: 200px;
+  height: 100px;
   background-color: #E2F8F7;
   position: relative;
 }

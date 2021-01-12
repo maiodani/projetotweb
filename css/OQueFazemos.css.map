@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AACA,AAAA,IAAI,CAAA;EACA,MAAM,EAAE,MAAM;CACjB;;AACD,AAGY,GAHT,CACC,SAAS,CACL,iBAAiB,CACb,CAAC,CAAC;EACE,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,OAAO;EACpB,OAAO,EAAE,KAAK;CACjB",
+    "mappings": "AACA,AAAA,IAAI,CAAA;EACA,MAAM,EAAE,MAAM;CACjB",
     "sources": [
         "OQueFazemos.scss"
     ],
