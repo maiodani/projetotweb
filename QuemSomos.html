@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/inicio.css" rel="stylesheet"/>
+    <link href="css/Design.css" rel="stylesheet"/>
     <link href="css/QuemSomos.css" rel="stylesheet"/>
     
     <title>Unidade de Saúde Familiar de Albergaria-A-Velha</title>
 </head>
 <body>
     <div class="container">
-        <header>
+        <nav>
             <div class="main-menu">
                 <a id="titulo">Ucc Albergaria-A-Velha</a>
+                <img src="img/logotipo-ucc-quadrado_2.png" id="logo">
                 <img src="img/login-icon.png" class="main_imglogin">
-                <img src="img/logotipo-ucc-quadrado_2.png">
             </div>
             <div class="second-menu-open">
                 <img src="img/menu.png">
@@ -22,77 +22,116 @@
             <div class="second-menu finishreverse">
                 <div id="menu">
                     <ul>
+                        <li><a href="inicio.html">Home</a></li>
                         <li><a href="QuemSomos.html">Quem Somos</a></li>
-                        <li><a href="OQueFazemos.html">O que Fazemos</a></li>
-                        <li><a href="about.asp">About</a></li>
+                        <li>
+                            <a href="OQueFazemos.html">O que Fazemos</a>
+                            <ul>
+                                <li><a href="Consultas.html">Consultas</a></li>
+                                <li><a href="#">Submen2</a></li>
+                                <li><a href="#">Submen3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.asp">Indicadores</a></li>
+                        <li><a href="QuemSomos.html">Recursos</a></li>
+                        <li><a href="OQueFazemos.html">Mais Apoio</a></li>
+                        <img class="imglogin" src="img/login-icon.png" >
                     </ul>
                 </div>
             </div>
             <div class="login finishreverselogin">
                 <img class="close_login" src="img/x.webp">
+                <form id="login_form" method="post">
+                    <input type="text" name="username" id="username" placeholder="Username"/>
+                    <input type="password" name="password" id="password" placeholder="Password"/>
+                    <input type="button" value="Login" id="submit" onclick="loginuser()"/>
+                </form>
             </div>  
-        </header>
-        <nav>
-            <img class="slide_image1 finishslidein" src="img/slide1.jpg">
-            <img class="slide_image2 finishslideout" src="img/slide2.jpg">
-            <img class="slide_image3 finishslideout" src="img/slide3.jpg">
         </nav>
         <section>
             <div class="menu">
                 <ul>
                     <li><a href="inicio.html">Home</a></li>
                     <li><a href="QuemSomos.html">Quem Somos</a></li>
-                    <li><a href="OQueFazemos.html">O que Fazemos</a></li>
-                    <li><a href="about.asp">About</a></li>
-                    <img src="img/login-icon.png" class="imglogin">
+                    <li>
+                        <a href="OQueFazemos.html">O que Fazemos</a>
+                        <ul>
+                            <li><a href="Consultas.html">Consultas</a></li>
+                            <li><a href="#">Submen2</a></li>
+                            <li><a href="#">Submen3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.asp">Indicadores</a></li>
+                    <li><a href="QuemSomos.html">Recursos</a></li>
+                    <li><a href="OQueFazemos.html">Mais Apoio</a></li>
+                    <img class="imglogin" src="img/login-icon.png" >
                 </ul>
             </div>
-            <div id="destaques">
+            <div id="main">
+                <div id="lado_esquerdo">
                     <a><h3>Missão</h3>
-
-                        A nossa missão é contribuir para a melhoria do estado de saúde da população,<br> através da 
-                        prestação de cuidados de saúde e apoio psicológico e social,<br> de proximidade, em casa e na
-                         comunidade, no local de trabalho e nas escolas, a indivíduos,<br> famílias e grupos mais
-                          vulneráveis e fragilizados, assentes nos mais altos Padrões de <br>Qualidade técnico-científica,
-                           promovendo valores como a Acessibilidade e a Satisfação dos utentes,<br> com a finalidade de
-                            obtenção de Ganhos em Saúde</a><br>
-                            <a><h3>Visão</h3>
-                                
-                                Pretendems ser uma referência na área dos cuidados de proximidade e<br>
-                                 intervenção comunitária, assegurando respostas integradas, articuladas<br> 
-                                 e diferenciadas, respondendo às necessidades da população da  área de <br>
-                                 abrangência, de acordo com os Padrões de Qualidade estandardizados pelas<br>
-                                  diferentes ordens profissionais.</a>
-                                  <a><h3>Valores</h3>
-                                    
-                                    O respeito pela individualidade do utente<br>
-                                    A salvaguarda dos direitos das pessoas<br>
-                                    A promoção da humanização no atendimento<br>
-                                    O bom relacionamento entre a comunidade, prestador de cuidados e equipa<br>
-                                    A cooperação e articulação com as outras unidades funcionais do ACES<br>
-                                    O estabelecimento de parcerias com estruturas da comunidade local<br>
-                                    A promoção da solidariedade e do trabalho em equipa<br>
-                                    A organização dos serviços em função das necessidades das populações<br>
-                                    A autonomia assente na organização funcional e técnica.</a>  
-                                    <a><h3>Funcionários</h3>
-                                        Atualmente contamos com 1 médico, 4 enfermeiros,<br> 1 secretário clínico, 
-                                        1 Técnico dos Serviços Sociais e 1 fisioterapeuta.
-                                    </a>
-                        <!--  <p>É uma unidade de prestação de cuidados de saúde, 
-                        apoio psicológico e social, de âmbito domiciliário e comunitário, direcionando a sua ação para pessoas e grupos mais vulneráveis em situação de maior 
-                        risco  ou dependência física funcional ou de doença, que requeira acompanhamento próximo.</p>
-                        Pretende contribuir para a melhoria do estado de saúde da população da sua área geográfica de intervenção, visando a obtenção de ganhos em saúde e 
-                        concorrendo de um modo direto para o cumprimento da missão do Agrupamento de Centros de Saúde (ACES) Baixo Vouga, em que se integra.-->  
-                    
-            
-                        
-                    
+                        A nossa missão é contribuir para a melhoria do estado de saúde da população,através da 
+                        prestação de cuidados de saúde e apoio psicológico e social, de proximidade, em casa e na
+                        comunidade, no local de trabalho e nas escolas, a indivíduos, famílias e grupos mais
+                        vulneráveis e fragilizados, assentes nos mais altos Padrões de Qualidade técnico-científica,
+                        promovendo valores como a Acessibilidade e a Satisfação dos utentes, com a finalidade de
+                        obtenção de Ganhos em Saúde<br>
+                        <h3>Visão</h3> 
+                        Pretendems ser uma referência na área dos cuidados de proximidade e
+                        intervenção comunitária, assegurando respostas integradas, articuladas 
+                        e diferenciadas, respondendo às necessidades da população da  área de 
+                        abrangência, de acordo com os Padrões de Qualidade estandardizados pelas
+                        diferentes ordens profissionais.<br>
+    
+                        <h3>Valores</h3> 
+                        O respeito pela individualidade do utente;<br>
+                        A salvaguarda dos direitos das pessoas;<br>
+                        A promoção da humanização no atendimento;<br>
+                        O bom relacionamento entre a comunidade, prestador de cuidados e equipa;<br>
+                        A cooperação e articulação com as outras unidades funcionais do ACES;<br>
+                        O estabelecimento de parcerias com estruturas da comunidade local;<br>
+                        A promoção da solidariedade e do trabalho em equipa;<br>
+                        A organização dos serviços em função das necessidades das populações;<br>
+                        A autonomia assente na organização funcional e técnica. 
+    
+                        <h3>Funcionários</h3>
+                        Atualmente contamos com 1 médico, 4 enfermeiros, 1 secretário clínico, 
+                        1 Técnico dos Serviços Sociais e 1 fisioterapeuta.
+                    </a>
+                </div>
+                <div id="lado_direito">
+                    <img src="img/logotipo-ucc-quadrado_2.png" id="logo">  
+                    <a> <h3>Morada da sede</h3>
+                        <h2>UCC Albergaria-a-Velha</h2> 
+                        Rua 25 de Abril
+                        <br>3850-004 Albergaria-a-Velha
+                        <h2>Horário de Funcionamento</h2>
+                        De 2ª a 6ª feira: 08:00 às 20:00
+                        <br>Sábados, domingos e feriados: 09:00 às
+                        <br>17:00, apenas quando necessário
+                        <h2>Telefone</h2>
+                        234523213
+                        <h2>Email</h2>
+                        ucc.avelha@arscentro.min-saude.pt
+                    </a>
+                </div>         
             </div>
-
+            
             <div id="teste">
 
             </div>     
         </section>
+        <footer>
+            <h3>Contactos</h3>
+            <div>
+                <a>Email:</a>
+                <a href="mailto:ucc.avelha@arscentro.min-saude.pt">ucc.avelha@arscentro.min-saude.pt</a>
+            </div>
+            <div>
+                <p><a>Telefone:</a>
+                <a href="tel:234523213">234523213</a></p>
+            </div>
+        </footer>
     </div>
     <script src="js/script.js"></script>
 </body>

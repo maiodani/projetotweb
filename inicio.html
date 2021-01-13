@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/Design.css" rel="stylesheet"/>
     <link href="css/inicio.css" rel="stylesheet"/>
     <title>Unidade de Saúde Familiar de Albergaria-A-Velha</title>
 </head>
 <body>
     <div class="container">
-        <header>
+        <nav>
             <div class="main-menu">
                 <a id="titulo">Ucc Albergaria-A-Velha</a>
                 <img src="img/logotipo-ucc-quadrado_2.png" id="logo">
@@ -20,9 +21,20 @@
             <div class="second-menu finishreverse">
                 <div id="menu">
                     <ul>
+                        <li><a href="inicio.html">Home</a></li>
                         <li><a href="QuemSomos.html">Quem Somos</a></li>
-                        <li><a href="OQueFazemos.html">O que Fazemos</a></li>
-                        <li><a href="about.asp">About</a></li>
+                        <li>
+                            <a href="OQueFazemos.html">O que Fazemos</a>
+                            <ul>
+                                <li><a href="Consultas.html">Consultas</a></li>
+                                <li><a href="#">Submen2</a></li>
+                                <li><a href="#">Submen3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.asp">Indicadores</a></li>
+                        <li><a href="QuemSomos.html">Recursos</a></li>
+                        <li><a href="OQueFazemos.html">Mais Apoio</a></li>
+                        <img class="imglogin" src="img/login-icon.png" >
                     </ul>
                 </div>
             </div>
@@ -34,40 +46,62 @@
                     <input type="button" value="Login" id="submit" onclick="loginuser()"/>
                 </form>
             </div>  
-        </header>
-        <nav>
+        </nav>
+        <header>
             <img class="slide_image1 finishslidein" src="img/slide1.jpg">
             <img class="slide_image2 finishslideout" src="img/slide2.jpg">
             <img class="slide_image3 finishslideout" src="img/slide3.jpg">
-        </nav>
+        </header>
         <section>
             <div class="menu">
                 <ul>
                     <li><a href="inicio.html">Home</a></li>
                     <li><a href="QuemSomos.html">Quem Somos</a></li>
-                    <li><a href="OQueFazemos.html">O que Fazemos</a></li>
-                    <li><a href="about.asp">About</a></li>
+                    <li>
+                        <a href="OQueFazemos.html">O que Fazemos</a>
+                        <ul>
+                            <li><a href="Consultas.html">Consultas</a></li>
+                            <li><a href="#">Submen2</a></li>
+                            <li><a href="#">Submen3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.asp">Indicadores</a></li>
+                    <li><a href="QuemSomos.html">Recursos</a></li>
+                    <li><a href="OQueFazemos.html">Mais Apoio</a></li>
                     <img class="imglogin" src="img/login-icon.png" >
                 </ul>
             </div>
-            <div id="destaques">
-                    <a>É uma unidade de prestação de cuidados de saúde, apoio psicológico e social, de âmbito domiciliário e comunitário, direcionando a sua ação para pessoas e grupos mais vulneráveis em situação de maior risco  ou dependência física funcional ou de doença, que requeira acompanhamento próximo.</a>
-                    <!--  <p>É uma unidade de prestação de cuidados de saúde, 
-                        apoio psicológico e social, de âmbito domiciliário e comunitário, direcionando a sua ação para pessoas e grupos mais vulneráveis em situação de maior 
-                        risco  ou dependência física funcional ou de doença, que requeira acompanhamento próximo.</p>
-                        Pretende contribuir para a melhoria do estado de saúde da população da sua área geográfica de intervenção, visando a obtenção de ganhos em saúde e 
-                        concorrendo de um modo direto para o cumprimento da missão do Agrupamento de Centros de Saúde (ACES) Baixo Vouga, em que se integra.-->  
+            <div id="main">
+                <a> 
+                    <h1>CENTRO DE SAÚDE DE ALBERGARIA-A-VELHA</h1>
                     
-                    <img src="img/img_home.jpg">
-            </div>
-            <div id="teste">
+                    faz parte  do  Agrupamento de Centros de Saúde Baixo Vouga, tendo sido criada em Dezembro de 2010.
+                    
+                    <p>É uma unidade de prestação de cuidados de saúde, apoio psicológico e social, de âmbito domiciliário e comunitário, 
+                    direcionando a sua ação para pessoas e grupos mais vulneráveis em situação de maior risco  ou dependência física funcional 
+                    ou de doença, que requeira acompanhamento próximo.</p>
 
-            </div>     
+                    <p>Pretende contribuir para a melhoria do estado de saúde da população da sua área geográfica de intervenção, visando a obtenção 
+                    de ganhos em saúde e concorrendo de um modo direto para o cumprimento da missão do Agrupamento de Centros de Saúde (ACES) Baixo Vouga, 
+                    em que se integra.</p> 
+                </a>
+                <img src="img/centro.jpg">
+            </div> 
         </section>
+
         <footer>
-            <a>teste</a>    
+            <h3>Contactos</h3>
+            <div>
+                <a>Email:</a>
+                <a href="mailto:ucc.avelha@arscentro.min-saude.pt">ucc.avelha@arscentro.min-saude.pt</a>
+            </div>
+            <div>
+                <p><a>Telefone:</a>
+                <a href="tel:234523213">234523213</a></p>
+            </div>
         </footer>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/slide.js"></script>
 </body>
 </html>
