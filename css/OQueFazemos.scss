@@ -1,36 +1,6 @@
 .container{
     section{
         margin-top: unset;
-        #main{
-            padding-top: 50px;
-            padding-bottom: 50px;
-            form{
-                padding-top: 20px;
-                border-radius: 20px;
-                color: white;
-                margin: auto;
-                background-color: #0092b9;
-                width: 40%;
-                label{
-                    font-size: 1.3em;
-                }
-                input[type="text"]{
-                    width: 50%;
-                    height: 25px;
-                    border: none;
-                    border-radius: 10px;
-                }
-                select{
-                    border: none;
-                    border-radius: 10px;
-                }
-                input[type="button"]{
-                    width: 60%;
-                    height: 25px;
-                    border: none;
-                    border-radius: 10px;
-                }
-            }
-        }
     }
+
 }

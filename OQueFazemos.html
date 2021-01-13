@@ -22,11 +22,20 @@
             <div class="second-menu finishreverse">
                 <div id="menu">
                     <ul>
+                        <li><a href="inicio.html">Home</a></li>
                         <li><a href="QuemSomos.html">Quem Somos</a></li>
-                        <li><a href="OQueFazemos.html">O que Fazemos</a></li>
+                        <li>
+                            <a href="OQueFazemos.html">O que Fazemos</a>
+                            <ul>
+                                <li><a href="Consultas.html">Consultas</a></li>
+                                <li><a href="#">Submen2</a></li>
+                                <li><a href="#">Submen3</a></li>
+                            </ul>
+                        </li>
                         <li><a href="about.asp">Indicadores</a></li>
                         <li><a href="QuemSomos.html">Recursos</a></li>
                         <li><a href="OQueFazemos.html">Mais Apoio</a></li>
+                        <img class="imglogin" src="img/login-icon.png" >
                     </ul>
                 </div>
             </div>
@@ -39,7 +48,7 @@
                 </form>
             </div>  
         </nav>
-        <section>
+        <section id="section">
             <div class="menu">
                 <ul>
                     <li><a href="inicio.html">Home</a></li>
@@ -59,46 +68,7 @@
                 </ul>
             </div>
             <div id="main">
-                <form>
-                    <h3>Precisa de médico de família?</h3>
-                    <h4>Então prencha este formulario.</h4>
-                    <label for="Pnome">Primeiro Nome:</label><br>
-                    <input type="text" id="Pnome" name="Pnome"><br>
-                    <br>
-                    <label for="Unome">Último Nome:</label><br>
-                    <input type="text" id="Unome" name="Unome"><br>
-                    <br>
-                    <label for="Ci">Cartão de Identificação:</label><br>
-                    <input type="text" id="Unome" name="Unome"><br>
-                    <br>
-                    <label for="Idade">Idade:</label><br>
-                    <input type="text" id="Unome" name="Unome"><br>
-                    <br>
-                    <label for="Email">Email:</label><br>
-                    <input type="text" id="Unome" name="Unome"><br>
-                    <br>
-                    <label for="Morada">Morada:</label><br>
-                    <input type="text" id="Unome" name="Unome"><br>
-                    <br>
-                    <label for="Sexo">Sexo:</label><br>
-                    <select id="sexo_options">
-                        <option value="">Selecione uma opção</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="outro">Outro</option>
-                    </select><br>
-                    <br>
-                    <label for="medico">Médico:</label><br>
-                    <select id="medicos">
-                        <option value="">Selecione uma opção</option>
-                        <option value="joao">Dr João Silva</option>
-                        <option value="andreia">Dra Andreia Almeida</option>
-                        <option value="pedro">Dr Pedro Ferreira</option>
-                    </select><br>
-                    <br>
-                    <input type="button" value="Enviar" id="submit" onclick="loginuser()"/><br>
-                    <br>
-                  </form>
+               
             </div>
 
             <div id="teste">

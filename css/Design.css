@@ -452,7 +452,7 @@ body {
   }
   .container section #main {
     padding-top: 80px;
-    width: 10%;
+    width: 100%;
     text-align: center;
   }
   .container section #main a {

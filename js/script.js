@@ -11,6 +11,9 @@ document.querySelector('.close_login').addEventListener('click',loginanimationcl
 var secondmenu=document.querySelector('.second-menu');
 var login=document.querySelector('.login');
 
+//ajustar height da pagina
+document.getElementById("section").style.minHeight=(window.innerHeight-150)+"px";
+
 //functions
 //menu que vem de lado
 function menuanimation(){
@@ -73,5 +76,20 @@ function loginuser(){
   }
   else{
     alert("Username ou Password incorretos");
+  }
+}
+function medicofamiliaform(){
+  var unome = document.getElementById("unome").value
+  var pnome = document.getElementById("pnome").value
+  var cdi = document.getElementById("cdi").value
+  var idade = document.getElementById("idade").value
+  var email = document.getElementById("email").value
+  var morada = document.getElementById("morada").value
+  var sexo = document.getElementById("sexo").value
+  var medicos = document.getElementById("medicos").value
+  if(unome && pnome && cdi && idade && email && morada && sexo && medicos != ""){
+    document.getElementById("medicofamilia").style.display="none";
+  }else{
+    alert("Faltam campos por preencher");
   }
 }
