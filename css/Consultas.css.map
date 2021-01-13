@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAMY,OANL,CACH,UAAU,CACN,IAAI,CAIA,KAAK,CAAA,AAAA,IAAC,CAAD,IAAC,AAAA,EAAU;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "Consultas.scss"
+    ],
+    "names": [],
+    "file": "Consultas.css"
+}
