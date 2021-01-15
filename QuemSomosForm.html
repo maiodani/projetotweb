@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/Design.css" rel="stylesheet"/>
-    <link href="css/Consultas.css" rel="stylesheet"/>
+    <link href="css/QuemSomosForm.css" rel="stylesheet"/>
     
     <title>Unidade de Saúde Familiar de Albergaria-A-Velha</title>
 </head>
@@ -68,8 +68,8 @@
                 </ul>
             </div>
             <div id="main">
-                <form id="medicofamilia">
-                    <h3>Precisa de médico de família?</h3>
+                <form id="contacto">
+                    <h3>Precisa de algum esclarecimento, fazer uma reclamação ou uma sugestão?</h3>
                     <h4>Então prencha este formulario.</h4>
                     <h5>* Obrigatório</h5>
                     <label for="Pnome">* Primeiro Nome:</label><br>
@@ -78,38 +78,21 @@
                     <label for="Unome">* Último Nome:</label><br>
                     <input type="text" id="unome"><br>
                     <br>
-                    <label for="Ci">* Cartão de Identificação:</label><br>
-                    <input type="text" id="cdi"><br>
-                    <br>
-                    <label for="Idade">* Idade:</label><br>
-                    <input type="text" id="idade"><br>
-                    <br>
                     <label for="Email">* Email:</label><br>
                     <input type="text" id="email"><br>
                     <br>
-                    <label for="Morada">* Morada:</label><br>
-                    <input type="text" id="morada"><br>
-                    <br>
-                    <label for="Sexo">* Sexo:</label><br>
-                    <select id="sexo">
+                    <label for="Tipo">* O que deseja?:</label><br>
+                    <select id="tipo">
                         <option value="">Selecione uma opção</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="outro">Outro</option>
+                        <option value="esclarecimento">Esclarecimento</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="sugestao">Sugestão</option>
                     </select><br>
                     <br>
-                    <label for="medico">* Médico:</label><br>
-                    <select id="medicos">
-                        <option value="">Selecione uma opção</option>
-                        <option value="joao">Dr João Silva</option>
-                        <option value="andreia">Dra Andreia Almeida</option>
-                        <option value="pedro">Dr Pedro Ferreira</option>
-                    </select><br>
-                    <br>
-                    <label for="Comentario">Comentário:</label><br>
+                    <label for="Comentario">* Comentário:</label><br>
                     <textarea rows="4" type="text" id="comentario"></textarea><br>
                     <br>
-                    <input type="button" value="Enviar" id="submit" onclick="medicofamiliaform()"/><br>
+                    <input type="button" value="Enviar" id="submit" onclick="contactarform()"/><br>
                     <br>
                 </form> 
                 <div id="formsucesso">

@@ -89,6 +89,20 @@ function medicofamiliaform(){
   var medicos = document.getElementById("medicos").value
   if(unome && pnome && cdi && idade && email && morada && sexo && medicos != ""){
     document.getElementById("medicofamilia").style.display="none";
+    document.getElementById("formsucesso").style.display="blo";
+  }else{
+    alert("Faltam campos por preencher");
+  }
+}
+function contactarform(){
+  var unome = document.getElementById("unome").value
+  var pnome = document.getElementById("pnome").value
+  var email = document.getElementById("email").value
+  var tipo = document.getElementById("tipo").value
+  var comentario = document.getElementById("comentario").value
+  if(unome && pnome && email && tipo && comentario != ""){
+    document.getElementById("contacto").style.display="none";
+    document.getElementById("formsucesso").style.display="block";
   }else{
     alert("Faltam campos por preencher");
   }
