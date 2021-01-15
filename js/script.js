@@ -3,16 +3,16 @@ window.addEventListener('scroll', () => {
   document.body.style.setProperty('--scroll',window.pageYOffset / document.body.offsetHeight);
 }, false);
 
-//click
-document.querySelector('.second-menu-open').addEventListener('click',menuanimation);
-document.querySelector('.imglogin').addEventListener('click',loginanimationopen);
-document.querySelector('.main_imglogin').addEventListener('click',loginanimationopen);
-document.querySelector('.close_login').addEventListener('click',loginanimationclose);
-var secondmenu=document.querySelector('.second-menu');
-var login=document.querySelector('.login');
-
 //ajustar height da pagina
 document.getElementById("section").style.minHeight=(window.innerHeight-150)+"px";
+
+//click
+document.querySelector('.second-menu-open').addEventListener('click',menuanimation);
+document.getElementById('imglogin').addEventListener('click',loginanimationopen);
+document.getElementById('main_imglogin').addEventListener('click',loginanimationopen);
+document.getElementById('close_login').addEventListener('click',loginanimationclose);
+var secondmenu=document.querySelector('.second-menu');
+var login=document.querySelector('.login');
 
 //functions
 //menu que vem de lado
@@ -67,6 +67,7 @@ function loginanimationclose(){
     document.body.style.overflowY="";
   }, 1);
 }
+
 var tentativas=3;
 function loginuser(){
   var username = document.getElementById("username").value;
@@ -78,6 +79,7 @@ function loginuser(){
     alert("Username ou Password incorretos");
   }
 }
+
 function medicofamiliaform(){
   var unome = document.getElementById("unome").value
   var pnome = document.getElementById("pnome").value
@@ -94,6 +96,7 @@ function medicofamiliaform(){
     alert("Faltam campos por preencher");
   }
 }
+
 function contactarform(){
   var unome = document.getElementById("unome").value
   var pnome = document.getElementById("pnome").value
