@@ -91,7 +91,7 @@ function medicofamiliaform(){
   var medicos = document.getElementById("medicos").value
   if(unome && pnome && cdi && idade && email && morada && sexo && medicos != ""){
     document.getElementById("medicofamilia").style.display="none";
-    document.getElementById("formsucesso").style.display="blo";
+    document.getElementById("formsucesso").style.display="block";
   }else{
     alert("Faltam campos por preencher");
   }
