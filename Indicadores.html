@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/Design.css" rel="stylesheet"/>
-    <link href="css/inicio.css" rel="stylesheet"/>
+    <link href="css/QuemSomos.css" rel="stylesheet"/>
+    
     <title>Unidade de Saúde Familiar de Albergaria-A-Velha</title>
+     <!--Load the AJAX API-->
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script type="text/javascript">
+ 
+       // Load the Visualization API and the corechart package.
+       google.charts.load('current', {'packages':['corechart']});
+ 
+       // Set a callback to run when the Google Visualization API is loaded.
+       google.charts.setOnLoadCallback(drawChart);
+ 
+       // Callback that creates and populates a data table,
+       // instantiates the pie chart, passes in the data and
+       // draws it.
+       function drawChart() {
+ 
+         // Create the data table.
+         var data = new google.visualization.DataTable();
+         data.addColumn('string', 'Idades');
+         data.addColumn('number', 'Percentagem');
+         data.addRows([
+           ['0-14 anos', 15,4],
+           ['15-24 anos', 10,6],
+           ['25-64 anos', 55,9],
+           ['>65 anos', 18,03]
+         ]);
+ 
+         // Set chart options
+         var options = {'title':'População de Albergaria-a-Velha (2011)',
+                        'width':500,
+                        'height':400};
+ 
+         // Instantiate and draw our chart, passing in some options.
+         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+         chart.draw(data, options);
+       }
+     </script>
+   </head>
 </head>
 <body>
     <div class="container">
@@ -13,7 +51,7 @@
             <div class="main-menu">
                 <a id="titulo">Ucc Albergaria-A-Velha</a>
                 <img src="img/logotipo-ucc-quadrado_2.png" id="logo">
-                <img src="img/login-icon.png" id="main_imglogin">
+                <img src="img/login-icon.png" class="main_imglogin">
             </div>
             <div class="second-menu-open">
                 <img src="img/menu.png">
@@ -31,14 +69,14 @@
                                 <li><a href="Alcoolismo.html">Desabituação alcoólica</a></li>
                             </ul>
                         </li>
-                        <li><a href="Indicadores.html">Indicadores</a></li>
+                        <li><a href="about.asp">Indicadores</a></li>
                         <li><a href="QuemSomos.html">Recursos</a></li>
                         <li><a href="Apoio.html">Mais Apoio</a></li>
                     </ul>
                 </div>
             </div>
             <div class="login finishreverselogin">
-                <img id="close_login" src="img/x.webp">
+                <img class="close_login" src="img/x.webp">
                 <form id="login_form" method="post">
                     <input type="text" name="username" id="username" placeholder="Username"/>
                     <input type="password" name="password" id="password" placeholder="Password"/>
@@ -46,11 +84,6 @@
                 </form>
             </div>  
         </nav>
-        <header>
-            <img class="slide_image1 finishslidein" src="img/slide1.jpg">
-            <img class="slide_image2 finishslideout" src="img/slide2.jpg">
-            <img class="slide_image3 finishslideout" src="img/slide3.jpg">
-        </header>
         <section id="section">
             <div class="menu">
                 <ul>
@@ -64,30 +97,24 @@
                             <li><a href="Alcoolismo.html">Desabituação alcoólica</a></li>
                         </ul>
                     </li>
-                    <li><a href="Indicadores.html">Indicadores</a></li>
+                    <li><a href="about.asp">Indicadores</a></li>
                     <li><a href="QuemSomos.html">Recursos</a></li>
                     <li><a href="Apoio.html">Mais Apoio</a></li>
-                    <img id="imglogin" src="img/login-icon.png">
+                    <img class="imglogin" src="img/login-icon.png" >
                 </ul>
             </div>
             <div id="main">
-                <a> 
-                    <h1>CENTRO DE SAÚDE DE ALBERGARIA-A-VELHA</h1>
-                    
-                    faz parte  do  Agrupamento de Centros de Saúde Baixo Vouga, tendo sido criada em Dezembro de 2010.
-                    
-                    <p>É uma unidade de prestação de cuidados de saúde, apoio psicológico e social, de âmbito domiciliário e comunitário, 
-                    direcionando a sua ação para pessoas e grupos mais vulneráveis em situação de maior risco  ou dependência física funcional 
-                    ou de doença, que requeira acompanhamento próximo.</p>
+                <div id="lado_esquerdo">
+                    <a><h3>Graficos</h3>
+                        <div id="chart_div"></div>
+                      </a>  
+                </div>
+            </div>
 
-                    <p>Pretende contribuir para a melhoria do estado de saúde da população da sua área geográfica de intervenção, visando a obtenção 
-                    de ganhos em saúde e concorrendo de um modo direto para o cumprimento da missão do Agrupamento de Centros de Saúde (ACES) Baixo Vouga, 
-                    em que se integra.</p> 
-                </a>
-                <img src="img/centro.jpg">
-            </div> 
+            <div id="teste">
+
+            </div>     
         </section>
-
         <footer>
             <h3>Contactos</h3>
             <div>
@@ -101,6 +128,5 @@
         </footer>
     </div>
     <script src="js/script.js"></script>
-    <script src="js/slide.js"></script>
 </body>
 </html>
