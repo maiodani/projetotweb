@@ -273,7 +273,7 @@ body {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  width: 18%;
+  width: 16%;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 3;
@@ -315,9 +315,10 @@ body {
 }
 
 .container section #main {
-  padding-top: 50px;
+  padding-top: 40px;
   margin: auto;
   width: 100%;
+  padding-bottom: 40px;
 }
 
 .container section #main a {

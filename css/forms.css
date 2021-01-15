@@ -2,11 +2,6 @@
   margin-top: unset;
 }
 
-.container section #main {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
 .container section #main #formsucesso {
   display: none;
 }
@@ -57,4 +52,4 @@
     width: 80%;
   }
 }
-/*# sourceMappingURL=QuemSomosForm.css.map */
+/*# sourceMappingURL=forms.css.map */
