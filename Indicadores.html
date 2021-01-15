@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/Design.css" rel="stylesheet"/>
-    <link href="css/QuemSomos.css" rel="stylesheet"/>
+    <link href="css/indicadores.css" rel="stylesheet"/>
     
     <title>Unidade de Saúde Familiar de Albergaria-A-Velha</title>
      <!--Load the AJAX API-->
@@ -27,16 +27,14 @@
          data.addColumn('string', 'Idades');
          data.addColumn('number', 'Percentagem');
          data.addRows([
-           ['0-14 anos', 15,4],
-           ['15-24 anos', 10,6],
-           ['25-64 anos', 55,9],
-           ['>65 anos', 18,03]
+           ['0-14 anos', 15.4],
+           ['15-24 anos', 10.6],
+           ['25-64 anos', 55.9],
+           ['>65 anos', 18.03]
          ]);
  
          // Set chart options
-         var options = {'title':'População de Albergaria-a-Velha (2011)',
-                        'width':500,
-                        'height':400};
+         var options = {'title':'População de Albergaria-a-Velha (2011)', 'width':500, 'height':400};
  
          // Instantiate and draw our chart, passing in some options.
          var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -51,7 +49,7 @@
             <div class="main-menu">
                 <a id="titulo">Ucc Albergaria-A-Velha</a>
                 <img src="img/logotipo-ucc-quadrado_2.png" id="logo">
-                <img src="img/login-icon.png" class="main_imglogin">
+                <img src="img/login-icon.png" id="main_imglogin">
             </div>
             <div class="second-menu-open">
                 <img src="img/menu.png">
@@ -100,14 +98,14 @@
                     <li><a href="about.asp">Indicadores</a></li>
                     <li><a href="QuemSomos.html">Recursos</a></li>
                     <li><a href="Apoio.html">Mais Apoio</a></li>
-                    <img class="imglogin" src="img/login-icon.png" >
+                    <img id="imglogin" src="img/login-icon.png" >
                 </ul>
             </div>
             <div id="main">
                 <div id="lado_esquerdo">
                     <a><h3>Graficos</h3>
                         <div id="chart_div"></div>
-                      </a>  
+                    </a>  
                 </div>
             </div>
 
