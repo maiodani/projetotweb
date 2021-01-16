@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AACI,UADM,CACN,OAAO,CAAA;EACH,UAAU,EAAE,KAAK;CACpB",
+    "mappings": "AAAA,AACI,UADM,CACN,OAAO,CAAA;EACH,UAAU,EAAE,KAAK;CAIpB;;AANL,AAGQ,UAHE,CACN,OAAO,CAEH,KAAK,CAAA;EACD,OAAO,EAAE,IAAI;CAChB",
     "sources": [
         "indicadores.scss"
     ],

@@ -1,4 +1,10 @@
 .container section {
   margin-top: unset;
 }
+
+.container section #main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=indicadores.css.map */

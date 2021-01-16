@@ -1,5 +1,8 @@
 .container{
     section{
         margin-top: unset;
+        #main{
+            display: flex;
+        }
     }
 }

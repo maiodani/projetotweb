@@ -62,7 +62,7 @@ body {
 
 .container nav .login {
   overflow-y: hidden;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -243,7 +243,7 @@ body {
 .container section .menu {
   position: -webkit-sticky;
   position: sticky;
-  z-index: 0;
+  z-index: 1;
   top: 0;
   background-color: #33CFC9;
   width: 100%;
@@ -355,7 +355,7 @@ body {
 @media screen and (max-width: 960px) {
   .container nav .main-menu {
     display: block;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 0;
     background-color: #33CFC9;

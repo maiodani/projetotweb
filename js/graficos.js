@@ -31,6 +31,7 @@ function drawChart() {
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 }
+
 function drawChart2() {
 
     // Create the data table.
@@ -52,6 +53,7 @@ function drawChart2() {
     var chart = new google.visualization.BarChart(document.getElementById('chart_div2'));
     chart.draw(data, options);
 }
+
 function drawChart3() {
 
     // Create the data table.
