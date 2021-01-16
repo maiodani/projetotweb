@@ -3,9 +3,18 @@
         margin-top: unset;
         #main{
             #carta{
-                width: 100px;
-                height: 100px;
-                background-color: red ;
+                width: 200px;
+                height: 200px;
+                margin: auto;
+                background-color: #6C9897;
+                border-radius: 20px;
+                h3{
+                    color: white;
+                }
+                img{
+                    width: 100px;
+                    filter:invert(100%);
+                }
             }
         }
     }

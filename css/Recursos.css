@@ -3,8 +3,20 @@
 }
 
 .container section #main #carta {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: #6C9897;
+  border-radius: 20px;
+}
+
+.container section #main #carta h3 {
+  color: white;
+}
+
+.container section #main #carta img {
   width: 100px;
-  height: 100px;
-  background-color: red;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 /*# sourceMappingURL=Recursos.css.map */

@@ -8,40 +8,8 @@
     
     <title>Unidade de Saúde Familiar de Albergaria-A-Velha</title>
      <!--Load the AJAX API-->
-     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-     <script type="text/javascript">
- 
-       // Load the Visualization API and the corechart package.
-       google.charts.load('current', {'packages':['corechart']});
- 
-       // Set a callback to run when the Google Visualization API is loaded.
-       google.charts.setOnLoadCallback(drawChart);
- 
-       // Callback that creates and populates a data table,
-       // instantiates the pie chart, passes in the data and
-       // draws it.
-       function drawChart() {
- 
-         // Create the data table.
-         var data = new google.visualization.DataTable();
-         data.addColumn('string', 'Idades');
-         data.addColumn('number', 'Percentagem');
-         data.addRows([
-           ['0-14 anos', 15.4],
-           ['15-24 anos', 10.6],
-           ['25-64 anos', 56],
-           ['>65 anos', 18.03]
-         ]);
- 
-         // Set chart options
-         var options = {'title':'População de Albergaria-a-Velha (2011)', 'width':500, 'height':400};
- 
-         // Instantiate and draw our chart, passing in some options.
-         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-         chart.draw(data, options);
-       }
-     </script>
-   </head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/graficos.js"></script>
 </head>
 <body>
     <div class="container">
@@ -112,11 +80,9 @@
                 </ul>
             </div>
             <div id="main">
-                <div id="lado_esquerdo">
-                    <a><h3>Graficos</h3>
-                        <div id="chart_div"></div>
-                    </a>  
-                </div>
+                <a><h3>Graficos</h3>
+                    <div id="chart_div"></div>
+                </a>  
             </div>
 
             <div id="teste">
