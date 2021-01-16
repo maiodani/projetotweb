@@ -1,0 +1,10 @@
+.container section {
+  margin-top: unset;
+}
+
+.container section #main #carta {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+/*# sourceMappingURL=Recursos.css.map */
