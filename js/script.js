@@ -5,6 +5,9 @@ window.addEventListener('scroll', () => {
 
 //ajustar height da pagina
 document.getElementById("section").style.minHeight=(window.innerHeight-150)+"px";
+window.addEventListener('resize', function() {
+  document.getElementById("section").style.minHeight=(window.innerHeight-150)+"px";
+});
 
 //click
 document.querySelector('.second-menu-open').addEventListener('click',menuanimation);
