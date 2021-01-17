@@ -1,8 +1,3 @@
-//scroll count
-window.addEventListener('scroll', () => {
-  document.body.style.setProperty('--scroll',window.pageYOffset / document.body.offsetHeight);
-}, false);
-
 //ajustar height da pagina
 document.getElementById("section").style.minHeight=(window.innerHeight-150)+"px";
 window.addEventListener('resize', function() {

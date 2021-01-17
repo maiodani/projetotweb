@@ -27,10 +27,7 @@ function pct_populacao() {
     ]);
 
     // Set chart options
-    var options = {title:'Percentagem de população activa, jovem e idosa', 
-        width:500, 
-        height:400
-    };
+    var options = {title:'Percentagem de população activa, jovem e idosa'};
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('pct_populacao'));
@@ -47,7 +44,7 @@ function utentes_enfermeiros_medico() {
     ]);
     
     // Set chart options
-    var options = {width:500,height:400,legend: { position: "none" },title:"Média de utentes por médico e enfermeiros"};
+    var options = {legend: { position: "none" },title:"Média de utentes por médico e enfermeiros"};
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.ColumnChart(document.getElementById('utentes_enfermeiros_medico'));
@@ -66,10 +63,7 @@ function ind_dependencia() {
     ]);
 
     // Set chart options
-    var options = {title:'Índice de dependência total, jovens, idosos', 
-        width:500, 
-        height:400
-    };
+    var options = {title:'Índice de dependência total, jovens, idosos'};
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('ind_dependencia'));
@@ -85,10 +79,7 @@ function ind_vitalidade() {
     ]);
     
     // Set chart options
-    var options = {title:'Índice de vitalidade', 
-        width:400, 
-        height:150
-    };
+    var options = {title:'Índice de vitalidade',width:300,height:100};
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.Table(document.getElementById('ind_vitalidade'));
@@ -106,10 +97,7 @@ function custo_medicamento_utilizador() {
     ]);
     
     // Set chart options
-    var options = {title:'Custo médio de medicamentos, por utilizador', 
-        width:500, 
-        height:400
-    };
+    var options = {title:'Custo médio de medicamentos, por utilizador',};
     
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('custo_medicamento_utilizador'));
@@ -127,10 +115,7 @@ function num_consultas_utilizador() {
     ]);
     
     // Set chart options
-    var options = {title:'Número médio de consultas de enfermagem por utilizador', 
-        width:500, 
-        height:400
-    };
+    var options = {title:'Número médio de consultas de enfermagem por utilizador'};
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('num_consultas_utilizador'));

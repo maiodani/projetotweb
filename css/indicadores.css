@@ -14,4 +14,81 @@
 .container section #main #graficos_grid div {
   margin: auto;
 }
+
+.container section #main #graficos_grid #pct_populacao {
+  width: 500px;
+  height: 400px;
+}
+
+.container section #main #graficos_grid #utentes_enfermeiros_medico {
+  width: 500px;
+  height: 400px;
+}
+
+.container section #main #graficos_grid #ind_dependencia {
+  width: 500px;
+  height: 400px;
+}
+
+.container section #main #graficos_grid #ind_vitalidade {
+  width: 500px;
+  height: 400px;
+  margin-top: 150px;
+}
+
+.container section #main #graficos_grid #custo_medicamento_utilizador {
+  width: 500px;
+  height: 400px;
+}
+
+.container section #main #graficos_grid #num_consultas_utilizador {
+  width: 500px;
+  height: 400px;
+}
+
+.container section #main #graficos_grid #num_consultas_utilizador {
+  width: 500px;
+  height: 400px;
+}
+
+@media screen and (max-width: 960px) {
+  .container section {
+    margin-top: unset;
+  }
+  .container section #main #graficos_grid {
+    display: unset;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .container section #main #graficos_grid #pct_populacao {
+    width: 250px;
+    height: 150px;
+  }
+  .container section #main #graficos_grid #utentes_enfermeiros_medico {
+    width: 250px;
+    height: 150px;
+  }
+  .container section #main #graficos_grid #ind_dependencia {
+    width: 250px;
+    height: 150px;
+  }
+  .container section #main #graficos_grid #ind_vitalidade {
+    width: 200px;
+    height: 100px;
+    margin-top: unset;
+  }
+  .container section #main #graficos_grid #custo_medicamento_utilizador {
+    width: 250px;
+    height: 150px;
+  }
+  .container section #main #graficos_grid #num_consultas_utilizador {
+    width: 250px;
+    height: 150px;
+  }
+  .container section #main #graficos_grid #num_consultas_utilizador {
+    width: 250px;
+    height: 150px;
+  }
+}
 /*# sourceMappingURL=indicadores.css.map */

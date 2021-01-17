@@ -1,7 +1,3 @@
-body {
-  margin: 0 auto;
-}
-
 .container section {
   margin-top: unset;
 }
@@ -19,7 +15,7 @@ body {
 }
 
 .container section #main #lado_esquerdo {
-  margin-left: 5%;
+  padding-left: 4%;
   text-align: left;
   width: 60%;
 }
@@ -29,13 +25,42 @@ body {
 }
 
 .container section #main #lado_direito {
-  padding-left: 10%;
-  font-size: 1.5em;
+  padding-left: 8%;
   text-align: right;
 }
 
 .container section #main #lado_direito #logo {
   padding-top: 20%;
   width: 70%;
+}
+
+@media screen and (max-width: 960px) {
+  .container section {
+    margin-top: 100px;
+  }
+  .container section #main {
+    display: unset;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+  }
+  .container section #main #lado_esquerdo {
+    padding-left: unset;
+    text-align: center;
+    width: 100%;
+  }
+  .container section #main #lado_esquerdo a {
+    font-size: 4vw;
+  }
+  .container section #main #lado_direito {
+    padding-left: unset;
+    padding-right: unset;
+    text-align: center;
+  }
+  .container section #main #lado_direito #logo {
+    padding-top: 20%;
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=Parto.css.map */

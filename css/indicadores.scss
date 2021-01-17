@@ -1,13 +1,89 @@
 .container{
     section{
-        margin-top: unset;
+        margin-top:unset;
         #main{
             #graficos_grid{
                 display:grid;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: 33% 33% 33%;
                 div{
-                    margin: auto;
+                    margin: auto;    
+                }
+                #pct_populacao{
+                    width: 500px;
+                    height: 400px;
+                }
+                #utentes_enfermeiros_medico{
+                    width: 500px;
+                    height: 400px;
+                }
+                #ind_dependencia{
+                    width: 500px;
+                    height: 400px;
+                } 
+                #ind_vitalidade{
+                    width: 500px;
+                    height: 400px;
+                    margin-top:150px;
+                }
+                #custo_medicamento_utilizador{
+                    width: 500px;
+                    height: 400px;
+                }
+                #num_consultas_utilizador{
+                    width: 500px;
+                    height: 400px;
+                }
+                #num_consultas_utilizador{
+                    width: 500px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 960px){
+        section{
+            margin-top: unset;
+            #main{
+                #graficos_grid{
+                    display: unset;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 465px){
+        section{
+            #main{
+                #graficos_grid{
+                    #pct_populacao{
+                        width: 250px;
+                        height: 150px;
+                    }
+                    #utentes_enfermeiros_medico{
+                        width: 250px;
+                        height: 150px;
+                    }
+                    #ind_dependencia{
+                        width: 250px;
+                        height: 150px;
+                    } 
+                    #ind_vitalidade{
+                        width: 200px;
+                        height: 100px;
+                        margin-top:unset;
+                    }
+                    #custo_medicamento_utilizador{
+                        width: 250px;
+                        height: 150px;
+                    }
+                    #num_consultas_utilizador{
+                        width: 250px;
+                        height: 150px;
+                    }
+                    #num_consultas_utilizador{
+                        width: 250px;
+                        height: 150px;
+                    }
                 }
             }
         }
