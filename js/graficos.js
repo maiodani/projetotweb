@@ -1,19 +1,21 @@
 // Load the Visualization API and the corechart package.
 google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {'packages':['table']});
 
 // Set a callback to run when the Google Visualization API is loaded.
-google.charts.setOnLoadCallback(drawChart);
-google.charts.setOnLoadCallback(drawChart2);
-google.charts.setOnLoadCallback(drawChart3);
-google.charts.setOnLoadCallback(drawChart4);
-google.charts.setOnLoadCallback(drawChart5);
-google.charts.setOnLoadCallback(drawChart6);
+google.charts.setOnLoadCallback(pct_populacao);
+google.charts.setOnLoadCallback(utentes_enfermeiros_medico);
+google.charts.setOnLoadCallback(ind_dependencia);
+google.charts.setOnLoadCallback(ind_vitalidade );
+google.charts.setOnLoadCallback(custo_medicamento_utilizador);
+google.charts.setOnLoadCallback(num_consultas_utilizador);
+
+
 
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
 // draws it.
-function drawChart() {
-
+function pct_populacao() {
     // Create the data table.
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Idades');
@@ -31,55 +33,28 @@ function drawChart() {
     };
 
     // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    var chart = new google.visualization.PieChart(document.getElementById('pct_populacao'));
     chart.draw(data, options);
 }
 
-function drawChart2() {
-
+function utentes_enfermeiros_medico() {
     // Create the data table.
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Nº de enfermeiros');
-    data.addColumn('number', 'Média do número de utentes');
-    data.addRows([
-    ['4 enfermeiros', 2000]//(3893(população 0-14 anos)/24136(população total))*100
-
+    var data = google.visualization.arrayToDataTable([
+        ['Element', 'Utentes', { role: 'style' }],
+        ['Total', 396.8, 'color: red'],
+        ['Médicos', 1666.5, 'color: blue'],
+        ['Enfermeiros', 1470.5,'color: green']
     ]);
-
+    
     // Set chart options
-    var options = {title:'Média de utentes por enfermeiro', 
-        width:500, 
-        height:400
-    };
+    var options = {width:500,height:400,legend: { position: "none" },title:"Média de utentes por médico e enfermeiros"};
 
     // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div2'));
+    var chart = new google.visualization.ColumnChart(document.getElementById('utentes_enfermeiros_medico'));
     chart.draw(data, options);
 }
 
-function drawChart3() {
-
-    // Create the data table.
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Nº de Médicos');
-    data.addColumn('number', 'Número de utentes');
-    data.addRows([
-    ['1 médico', 8000]
-
-    ]);
-
-    // Set chart options
-    var options = {title:'Média de utentes por médico', 
-        width:500, 
-        height:400
-    };
-
-    // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
-    chart.draw(data, options);
-}
-function drawChart4() {
-
+function ind_dependencia() {
     // Create the data table.
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Populaçao (0-14 anos)+(65+ anos)');
@@ -90,7 +65,6 @@ function drawChart4() {
     ['Dependência idosos', 27.09907765545968]//(4554(população >65 anos)/16805(população 15-64 anos))*100
     ]);
 
-
     // Set chart options
     var options = {title:'Índice de dependência total, jovens, idosos', 
         width:500, 
@@ -98,48 +72,67 @@ function drawChart4() {
     };
 
     // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div4'));
+    var chart = new google.visualization.PieChart(document.getElementById('ind_dependencia'));
     chart.draw(data, options);
 }
-function drawChart5() {
+function ind_vitalidade() {
 
     // Create the data table.
     var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Populaçao 65+ anos');
-    data.addColumn('number', 'Populaçao 0-14');
+    data.addColumn('number', 'Indice de vitalidade');
     data.addRows([
-    ['Indice de vitalidade', 116.97919342409]
+    [116.97919342409]
     ]);
     
-
     // Set chart options
     var options = {title:'Índice de vitalidade', 
-        width:500, 
-        height:400
+        width:400, 
+        height:150
     };
 
     // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div5'));
+    var chart = new google.visualization.Table(document.getElementById('ind_vitalidade'));
     chart.draw(data, options);
 }
-function drawChart6() {
-
+function custo_medicamento_utilizador() {
     // Create the data table.
     var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Número de consultas de enfermagem em planeamento familiar');//1790
-    data.addColumn('number', 'Número de utilizadores em planeamento familiar');//250
+    data.addColumn('string', 'Utilizadores');
+    data.addColumn('number', 'Custo médio de medicamentos');
     data.addRows([
-    ['Média de consultas de enfermagem em planeamento familiar', 7.16]
+        ['Jovens 0-14 anos', 12.1],
+        ['Adultos 15-64 anos', 15.3],
+        ['Idosos >65 anos', 30.5]
     ]);
     
-
     // Set chart options
-    var options = {title:'Média de consultas de enfermagem em planeamento familiar', 
+    var options = {title:'Custo médio de medicamentos, por utilizador', 
+        width:500, 
+        height:400
+    };
+    
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('custo_medicamento_utilizador'));
+    chart.draw(data, options);
+}
+function num_consultas_utilizador() {
+    // Create the data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Utilizadores');
+    data.addColumn('number', 'Número médio de consultas de enfermagem');
+    data.addRows([
+        ['Jovens 0-14 anos', 1578],
+        ['Adultos 15-64 anos', 1345],
+        ['Idosos >65 anos', 2512]
+    ]);
+    
+    // Set chart options
+    var options = {title:'Número médio de consultas de enfermagem por utilizador', 
         width:500, 
         height:400
     };
 
     // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div6'));
+    var chart = new google.visualization.PieChart(document.getElementById('num_consultas_utilizador'));
     chart.draw(data, options);
 }
