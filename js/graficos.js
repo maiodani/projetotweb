@@ -5,6 +5,9 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 google.charts.setOnLoadCallback(drawChart2);
 google.charts.setOnLoadCallback(drawChart3);
+google.charts.setOnLoadCallback(drawChart4);
+google.charts.setOnLoadCallback(drawChart5);
+google.charts.setOnLoadCallback(drawChart6);
 
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
@@ -73,5 +76,68 @@ function drawChart3() {
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
+    chart.draw(data, options);
+}
+function drawChart4() {
+
+    // Create the data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Populaçao (0-14 anos)+(65+ anos)');
+    data.addColumn('number', 'Populaçao 15-64 anos');
+    data.addRows([
+    ['Dependência total', 50.26480214221]
+    ]);
+
+
+    // Set chart options
+    var options = {title:'Índice de dependência total', 
+        width:500, 
+        height:400
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div4'));
+    chart.draw(data, options);
+}
+function drawChart5() {
+
+    // Create the data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Populaçao 65+ anos');
+    data.addColumn('number', 'Populaçao 0-14');
+    data.addRows([
+    ['Indice de vitalidade', 116.97919342409]
+    ]);
+    
+
+    // Set chart options
+    var options = {title:'Índice de vitalidade', 
+        width:500, 
+        height:400
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div5'));
+    chart.draw(data, options);
+}
+function drawChart6() {
+
+    // Create the data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Número de consultas de enfermagem em planeamento familiar');//1790
+    data.addColumn('number', 'Número de utilizadores em planeamento familiar');//250
+    data.addRows([
+    ['Média de consultas de enfermagem em planeamento familiar', 7.16]
+    ]);
+    
+
+    // Set chart options
+    var options = {title:'Média de consultas de enfermagem em planeamento familiar', 
+        width:500, 
+        height:400
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div6'));
     chart.draw(data, options);
 }
