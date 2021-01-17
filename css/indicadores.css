@@ -2,9 +2,16 @@
   margin-top: unset;
 }
 
-.container section #main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.container section #main #graficos_grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.container section #main #graficos_grid div {
+  margin: auto;
 }
 /*# sourceMappingURL=indicadores.css.map */

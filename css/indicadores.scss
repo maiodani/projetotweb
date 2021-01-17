@@ -2,7 +2,14 @@
     section{
         margin-top: unset;
         #main{
-            display: flex;
+            #graficos_grid{
+                display:grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 50% 50%;
+                div{
+                    margin: auto;
+                }
+            }
         }
     }
 }

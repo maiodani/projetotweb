@@ -16,9 +16,9 @@ function drawChart() {
     data.addColumn('string', 'Idades');
     data.addColumn('number', 'Percentagem');
     data.addRows([
-    ['0-14 anos', 15.12943321],//(3893(população 0-14 anos)/24136(população total))*100
-    ['15-64 anos', 69.62628439],//(16805(população 15-64 anos)/24136(população total))*100   
-    ['>65 anos', 18.86808088]//(4554(população >65 anos)/24136(população total))*100
+    ['Jovem 0-14 anos', 15.12943321],//(3893(população 0-14 anos)/24136(população total))*100
+    ['Activa 15-64 anos', 69.62628439],//(16805(população 15-64 anos)/24136(população total))*100   
+    ['Idosa >65 anos', 18.86808088]//(4554(população >65 anos)/24136(população total))*100
     ]);
 
     // Set chart options
