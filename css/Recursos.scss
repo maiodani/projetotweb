@@ -2,18 +2,25 @@
     section{
         margin-top: unset;
         #main{
-            #carta{
-                width: 200px;
-                height: 200px;
-                margin: auto;
-                background-color: #6C9897;
-                border-radius: 20px;
-                h3{
-                    color: white;
-                }
-                img{
-                    width: 100px;
-                    filter:invert(100%);
+            a{
+                text-decoration: none;
+                #carta{
+                    width: 200px;
+                    height: 200px;
+                    margin: auto;
+                    background-color: #6C9897;
+                    border-radius: 20px;
+                    h3{
+                        color: white;
+                        font-size: 0.9em;
+                    }
+                    img{
+                        width: 100px;
+                        filter:invert(100%);
+                    }
+                    &:hover{
+                        background-color: #33CFC9;
+                    }
                 }
             }
         }

@@ -2,7 +2,11 @@
   margin-top: unset;
 }
 
-.container section #main #carta {
+.container section #main a {
+  text-decoration: none;
+}
+
+.container section #main a #carta {
   width: 200px;
   height: 200px;
   margin: auto;
@@ -10,13 +14,18 @@
   border-radius: 20px;
 }
 
-.container section #main #carta h3 {
+.container section #main a #carta h3 {
   color: white;
+  font-size: 0.9em;
 }
 
-.container section #main #carta img {
+.container section #main a #carta img {
   width: 100px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+.container section #main a #carta:hover {
+  background-color: #33CFC9;
 }
 /*# sourceMappingURL=Recursos.css.map */
