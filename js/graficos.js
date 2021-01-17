@@ -62,7 +62,7 @@ function drawChart3() {
     // Create the data table.
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Nº de Médicos');
-    data.addColumn('number', 'Média do número de utentes');
+    data.addColumn('number', 'Número de utentes');
     data.addRows([
     ['1 médico', 8000]
 
@@ -85,18 +85,20 @@ function drawChart4() {
     data.addColumn('string', 'Populaçao (0-14 anos)+(65+ anos)');
     data.addColumn('number', 'Populaçao 15-64 anos');
     data.addRows([
-    ['Dependência total', 50.26480214221]
+    ['Dependência total', 50.26480214221958],//((3893(população 0-14 anos)+4554(população >65 anos))/16805(população 15-64 anos))*100
+    ['Dependência jovens', 23.16572448675989],//(3893(população 0-14 anos)/16805(população 15-64 anos))*100
+    ['Dependência idosos', 27.09907765545968]//(4554(população >65 anos)/16805(população 15-64 anos))*100
     ]);
 
 
     // Set chart options
-    var options = {title:'Índice de dependência total', 
+    var options = {title:'Índice de dependência total, jovens, idosos', 
         width:500, 
         height:400
     };
 
     // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div4'));
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div4'));
     chart.draw(data, options);
 }
 function drawChart5() {
